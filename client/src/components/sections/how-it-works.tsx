@@ -13,7 +13,7 @@ const steps = [
     title: "Installation",
     description: "Our expert team handles professional installation with minimal disruption.",
     icon: Wrench,
-    color: "bg-grabbix-blue",
+    color: "bg-grabbix-teal",
   },
   {
     number: 3,
@@ -24,24 +24,17 @@ const steps = [
   },
   {
     number: 4,
-    title: "Customer Use",
-    description: "Users simply grab items and go with automatic checkout and payment processing.",
-    icon: Smartphone,
-    color: "bg-grabbix-blue",
-  },
-  {
-    number: 5,
     title: "Real-Time Monitoring",
     description: "Track inventory, sales, and usage patterns through our comprehensive dashboard.",
     icon: BarChart3,
     color: "bg-grabbix-teal",
   },
   {
-    number: 6,
+    number: 5,
     title: "Support",
     description: "Enjoy ongoing maintenance, restocking, and 24/7 technical support.",
     icon: Headphones,
-    color: "bg-grabbix-blue",
+    color: "bg-grabbix-teal",
   },
 ];
 

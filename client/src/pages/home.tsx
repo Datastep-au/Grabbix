@@ -1,7 +1,7 @@
 import Navigation from "@/components/sections/navigation";
 import Hero from "@/components/sections/hero";
+import ProductsShowcase from "@/components/sections/products-showcase";
 import HowItWorks from "@/components/sections/how-it-works";
-import Products from "@/components/sections/products";
 import Benefits from "@/components/sections/benefits";
 import UseCases from "@/components/sections/use-cases";
 import Contact from "@/components/sections/contact";
@@ -12,8 +12,8 @@ export default function Home() {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
+      <ProductsShowcase />
       <HowItWorks />
-      <Products />
       <Benefits />
       <UseCases />
       <Contact />

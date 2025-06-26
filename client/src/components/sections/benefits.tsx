@@ -38,13 +38,13 @@ const additionalBenefits = [
     title: "Eco-Friendly",
     description: "Energy-efficient design with smart power management and sustainable operations.",
     icon: Leaf,
-    color: "text-green-500",
+    color: "text-grabbix-teal",
   },
   {
     title: "Easy Maintenance",
     description: "Self-diagnosing systems with predictive maintenance and remote troubleshooting.",
     icon: Settings,
-    color: "text-grabbix-blue",
+    color: "text-grabbix-teal",
   },
 ];
 
@@ -59,7 +59,7 @@ export default function Benefits() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {mainBenefits.map((benefit, index) => {
             const IconComponent = benefit.icon;
             return (
@@ -74,13 +74,15 @@ export default function Benefits() {
           })}
         </div>
 
-        {/* Additional Benefits Row */}
+        {/* Additional Benefits Row - Same Style */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {additionalBenefits.map((benefit, index) => {
             const IconComponent = benefit.icon;
             return (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg text-center">
-                <IconComponent className={`h-16 w-16 ${benefit.color} mx-auto mb-4`} />
+              <div key={index} className="text-center group">
+                <div className="w-20 h-20 bg-white rounded-2xl shadow-lg flex items-center justify-center mx-auto mb-6 group-hover:shadow-xl transition-shadow duration-300">
+                  <IconComponent className={`h-12 w-12 ${benefit.color}`} />
+                </div>
                 <h3 className="text-xl font-semibold text-grabbix-dark mb-3">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </div>

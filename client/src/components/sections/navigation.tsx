@@ -45,7 +45,7 @@ export default function Navigation() {
                 How It Works
               </button>
               <button
-                onClick={() => scrollToSection("products")}
+                onClick={() => scrollToSection("products-showcase")}
                 className="text-gray-600 hover:text-grabbix-teal transition-colors duration-200"
               >
                 Products

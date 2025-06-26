@@ -86,19 +86,19 @@ export default function UseCases() {
           </div>
         ))}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {additionalUseCases.map((useCase, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-grabbix-light to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
             >
               <img
                 src={useCase.image}
                 alt={`${useCase.title}`}
-                className="rounded-xl mb-6 w-full h-40 object-cover"
+                className="rounded-lg mb-4 w-full h-32 object-cover"
               />
-              <h4 className="text-xl font-semibold text-grabbix-dark mb-3">{useCase.title}</h4>
-              <p className="text-gray-600">{useCase.description}</p>
+              <h4 className="text-lg font-semibold text-grabbix-dark mb-2">{useCase.title}</h4>
+              <p className="text-gray-600 text-sm">{useCase.description}</p>
             </div>
           ))}
         </div>
