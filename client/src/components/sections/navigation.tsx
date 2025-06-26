@@ -95,7 +95,7 @@ export default function Navigation() {
                 How It Works
               </button>
               <button
-                onClick={() => scrollToSection("products")}
+                onClick={() => scrollToSection("products-showcase")}
                 className="block px-3 py-2 text-gray-600 hover:text-grabbix-teal w-full text-left"
               >
                 Products
