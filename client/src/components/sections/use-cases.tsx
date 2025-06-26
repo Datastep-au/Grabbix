@@ -48,7 +48,7 @@ const additionalUseCases = [
 
 export default function UseCases() {
   return (
-    <section id="use-cases" className="py-20 bg-white">
+    <section id="use-cases" className="py-20 bg-grabbix-light">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-grabbix-dark mb-4">Perfect For Every Space</h2>
@@ -90,15 +90,15 @@ export default function UseCases() {
           {additionalUseCases.map((useCase, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center flex flex-col h-full"
             >
               <img
                 src={useCase.image}
                 alt={`${useCase.title}`}
-                className="rounded-lg mb-4 w-full h-32 object-cover"
+                className="rounded-lg mb-4 w-full h-40 object-cover flex-shrink-0"
               />
-              <h4 className="text-lg font-semibold text-grabbix-dark mb-2">{useCase.title}</h4>
-              <p className="text-gray-600 text-sm">{useCase.description}</p>
+              <h4 className="text-lg font-semibold text-grabbix-dark mb-3 flex-shrink-0">{useCase.title}</h4>
+              <p className="text-gray-600 text-sm flex-grow">{useCase.description}</p>
             </div>
           ))}
         </div>

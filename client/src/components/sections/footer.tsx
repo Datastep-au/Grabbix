@@ -1,5 +1,5 @@
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
-import grabbixLogo from "@assets/Grabbix Logo small_1750914621652.png";
+import grabbixLogo from "@assets/Grabbix_Green_1750924809790.png";
 
 export default function Footer() {
   return (

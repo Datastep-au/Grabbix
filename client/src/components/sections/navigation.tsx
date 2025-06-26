@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import grabbixLogo from "@assets/Grabbix Logo small_1750914621652.png";
+import grabbixLogo from "@assets/Grabbix_Green_1750924809790.png";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

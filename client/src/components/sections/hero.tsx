@@ -14,7 +14,7 @@ export default function Hero() {
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full">
         <video className="w-full h-full object-cover opacity-30" autoPlay muted loop playsInline>
-          <source src="/attached_assets/6072a70e16efb3dc38ec42e23a80893a_1750914642930.mp4" type="video/mp4" />
+          <source src="/attached_assets/Chillbot Video_1750924734635.mp4" type="video/mp4" />
           {/* Fallback background image */}
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-grabbix-dark/80 to-grabbix-blue/60"></div>

@@ -75,12 +75,12 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-5xl mx-auto">
+        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-4xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             {/* Contact Form */}
-            <div className="p-6 lg:p-8">
+            <div className="p-8 lg:p-10">
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
                   <FormField
                     control={form.control}
                     name="name"
@@ -180,7 +180,7 @@ export default function Contact() {
             </div>
 
             {/* Contact Info */}
-            <div className="bg-gradient-to-br from-grabbix-teal to-grabbix-blue p-6 lg:p-8 text-white">
+            <div className="bg-gradient-to-br from-grabbix-teal to-grabbix-blue p-8 lg:p-10 text-white">
               <h3 className="text-2xl font-bold mb-6">Let's Get Started</h3>
               <p className="mb-8 opacity-90">
                 Our team of experts will work with you to design the perfect smart store solution for your unique space and requirements.
