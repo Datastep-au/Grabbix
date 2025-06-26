@@ -13,9 +13,15 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full">
-        <video className="w-full h-full object-cover opacity-30" autoPlay muted loop playsInline>
-          <source src="/attached_assets/Chillbot Video_1750924734635.mp4" type="video/mp4" />
-          {/* Fallback background image */}
+        <video 
+          className="w-full h-full object-cover opacity-30" 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          preload="auto"
+        >
+          <source src="https://drive.google.com/uc?export=download&id=1WIEh_6klXHWZHQtL8fI3MKcLRUI3SzHL" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-grabbix-dark/80 to-grabbix-blue/60"></div>
       </div>
