@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import smartStoreImage from "@assets/Smart Store-min_1750924967033.png";
 
 const useCases = [
   {
@@ -32,7 +33,7 @@ const additionalUseCases = [
   {
     title: "Co-working Spaces",
     description: "Attract and retain members with premium convenience amenities that set you apart from competitors.",
-    image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+    image: smartStoreImage,
   },
   {
     title: "Gyms & Fitness",
