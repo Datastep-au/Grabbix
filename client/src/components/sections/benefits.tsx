@@ -4,22 +4,22 @@ const benefits = [
   {
     number: "1",
     title: "Fully managed",
-    description: "Complete hands-off operation for you. We handle everything from restocking and maintenance to customer support, so you can focus on what matters most.",
+    description: "Complete hands-off operation for you. We handle everything from from deliveries and restocking, to shopper questions, to service needs.",
   },
   {
     number: "2", 
-    title: "Smart inventory",
-    description: "Our AI learns your community's preferences and automatically adjusts product selection. Fresh, popular items are always available when your people need them.",
+    title: "Co-curated",
+    description: "We carefully curate the best products for your space. Your Grabbix adapts over time, evolving with shopper behavior and feedback, one of the many benefits of smart technology.",
   },
   {
     number: "3",
-    title: "24/7 frictionless access",
-    description: "Round-the-clock availability with seamless mobile payments. Simply tap your phone to unlock, grab what you need, and walk away - no cards, no cash, no waiting.",
+    title: "Frictionless Checkout",
+    description: "No lines, no waiting. Just Tap, grab and go with automatic payment processing and 24/7 availability.",
   },
   {
     number: "4",
-    title: "Enterprise security",
-    description: "Advanced monitoring systems with real-time alerts, secure access controls, and comprehensive transaction tracking ensure complete protection for your space and users.",
+    title: "Secured smart lock",
+    description: "Prevent theft with stores that are locked until pre-authorized with a credit card.",
   },
 ];
 
