@@ -4,17 +4,22 @@ const benefits = [
   {
     number: "1",
     title: "Fully managed",
-    description: "Taking care of your Grabbix is 100% \"we got you\" and 0% \"on you\"—from deliveries, to shopper questions, to service needs.",
+    description: "Complete hands-off operation for you. We handle everything from restocking and maintenance to customer support, so you can focus on what matters most.",
   },
   {
     number: "2", 
-    title: "Co-curated",
-    description: "We stock the best products for your space. Your Grabbix will evolve over time based on shoppers' behavior and feedback. Just another perk of smart tech, you know?",
+    title: "Smart inventory",
+    description: "Our AI learns your community's preferences and automatically adjusts product selection. Fresh, popular items are always available when your people need them.",
   },
   {
     number: "3",
-    title: "Wallet-less",
-    description: "Set up an account once, shop 24/7. No messy bills or credit cards; all anyone needs to shop is a phone.",
+    title: "24/7 frictionless access",
+    description: "Round-the-clock availability with seamless mobile payments. Simply tap your phone to unlock, grab what you need, and walk away - no cards, no cash, no waiting.",
+  },
+  {
+    number: "4",
+    title: "Enterprise security",
+    description: "Advanced monitoring systems with real-time alerts, secure access controls, and comprehensive transaction tracking ensure complete protection for your space and users.",
   },
 ];
 
@@ -32,7 +37,7 @@ export default function Benefits() {
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-4">
                 {/* Number Circle */}
-                <div className="flex-shrink-0 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center font-bold text-sm">
+                <div className="flex-shrink-0 w-8 h-8 bg-grabbix-teal text-white rounded-full flex items-center justify-center font-bold text-sm">
                   {benefit.number}
                 </div>
                 
