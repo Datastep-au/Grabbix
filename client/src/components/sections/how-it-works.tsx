@@ -55,16 +55,21 @@ export default function HowItWorks() {
             return (
               <div
                 key={step.number}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center group"
+                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
               >
-                <div className={`w-16 h-16 ${step.color} rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <IconComponent className="text-white h-8 w-8" />
+                {/* Teal Header Banner */}
+                <div className="bg-grabbix-teal text-white text-center py-4 font-bold text-lg">
+                  STEP {step.number}
                 </div>
-                <div className={`w-8 h-8 ${step.color} text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold`}>
-                  {step.number}
+                
+                {/* Card Content */}
+                <div className="p-8 text-center">
+                  <div className="mb-6">
+                    <IconComponent className="text-grabbix-dark h-12 w-12 mx-auto" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-grabbix-dark mb-4">{step.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{step.description}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-grabbix-dark mb-3">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
               </div>
             );
           })}
