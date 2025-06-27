@@ -1,7 +1,15 @@
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
-import grabbixLogo from "@assets/Grabbix_Green_1750924809790.png";
+import { Link } from "wouter";
+import grabbixLogo from "@assets/Grabbix Logo small_1750991127164.png";
 
 export default function Footer() {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <footer className="bg-grabbix-dark text-white py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,24 +39,28 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Products</h3>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <a href="#" className="hover:text-grabbix-teal transition-colors duration-200">
-                  Smart Coolers
-                </a>
+                <button 
+                  onClick={() => scrollToSection("products-showcase")}
+                  className="hover:text-grabbix-teal transition-colors duration-200 text-left"
+                >
+                  Smart Store
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-grabbix-teal transition-colors duration-200">
-                  Smart Stores
-                </a>
+                <button 
+                  onClick={() => scrollToSection("products-showcase")}
+                  className="hover:text-grabbix-teal transition-colors duration-200 text-left"
+                >
+                  Micro Market
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-grabbix-teal transition-colors duration-200">
-                  Micro Markets
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-grabbix-teal transition-colors duration-200">
-                  Custom Solutions
-                </a>
+                <button 
+                  onClick={() => scrollToSection("contact")}
+                  className="hover:text-grabbix-teal transition-colors duration-200 text-left"
+                >
+                  Custom Solution
+                </button>
               </li>
             </ul>
           </div>
@@ -68,11 +80,6 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#" className="hover:text-grabbix-teal transition-colors duration-200">
-                  Press
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-grabbix-teal transition-colors duration-200">
                   Contact
                 </a>
               </li>
@@ -81,17 +88,16 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">&copy; 2024 Grabbix. All rights reserved.</p>
+          <p className="text-gray-300 text-sm">
+            2025 Grabbix. All rights reserved.
+          </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-grabbix-teal text-sm transition-colors duration-200">
+            <Link href="/privacy-policy" className="text-gray-300 hover:text-grabbix-teal text-sm transition-colors duration-200">
               Privacy Policy
-            </a>
-            <a href="#" className="text-gray-400 hover:text-grabbix-teal text-sm transition-colors duration-200">
-              Terms of Service
-            </a>
-            <a href="#" className="text-gray-400 hover:text-grabbix-teal text-sm transition-colors duration-200">
+            </Link>
+            <Link href="/cookie-policy" className="text-gray-300 hover:text-grabbix-teal text-sm transition-colors duration-200">
               Cookie Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -39,16 +39,16 @@ export default function Navigation() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <button
-                onClick={() => scrollToSection("how-it-works")}
-                className="text-gray-600 hover:text-grabbix-teal transition-colors duration-200"
-              >
-                How It Works
-              </button>
-              <button
                 onClick={() => scrollToSection("products-showcase")}
                 className="text-gray-600 hover:text-grabbix-teal transition-colors duration-200"
               >
                 Products
+              </button>
+              <button
+                onClick={() => scrollToSection("how-it-works")}
+                className="text-gray-600 hover:text-grabbix-teal transition-colors duration-200"
+              >
+                How It Works
               </button>
               <button
                 onClick={() => scrollToSection("benefits")}
