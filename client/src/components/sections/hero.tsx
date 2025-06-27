@@ -17,9 +17,9 @@ export default function Hero() {
         <img
           src={heroImage}
           alt="Grabbix Smart Store"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-50"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-grabbix-dark/70 to-grabbix-blue/50"></div>
+        <div className="absolute inset-0 bg-gray-300/30"></div>
       </div>
 
       {/* Hero Content */}
@@ -42,7 +42,7 @@ export default function Hero() {
           <Button
             onClick={() => scrollToSection("how-it-works")}
             variant="outline"
-            className="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-grabbix-dark transition-all duration-300"
+            className="border-2 border-white text-[#1ecec1] bg-white px-8 py-4 text-lg font-semibold hover:scale-110 hover:shadow-xl transition-all duration-300"
           >
             Learn More
           </Button>
