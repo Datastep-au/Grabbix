@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navigation from "@/components/sections/navigation";
 import Hero from "@/components/sections/hero";
 import ProductsShowcase from "@/components/sections/products-showcase";
@@ -9,6 +10,20 @@ import Contact from "@/components/sections/contact";
 import Footer from "@/components/sections/footer";
 
 export default function Home() {
+  useEffect(() => {
+    // Handle hash navigation when coming from external links
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+      // Wait a bit for the page to fully load
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Navigation />
