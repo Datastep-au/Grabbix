@@ -1,50 +1,20 @@
-import { Zap, Clock, CreditCard, BarChart3, Shield, Leaf, Settings } from "lucide-react";
+import grabbixMachineImage from "@assets/Snacks and Drinks Smart Store (1)_1750992249819.png";
 
-const mainBenefits = [
+const benefits = [
   {
-    title: "Frictionless Checkout",
-    description: "Just grab and go - no lines, no scanning, no hassle. AI handles everything automatically.",
-    icon: Zap,
-    color: "text-grabbix-teal",
+    number: "1",
+    title: "Fully managed",
+    description: "Taking care of your Grabbix is 100% \"we got you\" and 0% \"on you\"—from deliveries, to shopper questions, to service needs.",
   },
   {
-    title: "24/7 Access",
-    description: "Available around the clock to meet your needs, whether it's early morning or late night.",
-    icon: Clock,
-    color: "text-grabbix-blue",
+    number: "2", 
+    title: "Co-curated",
+    description: "We stock the best products for your space. Your Grabbix will evolve over time based on shoppers' behavior and feedback. Just another perk of smart tech, you know?",
   },
   {
-    title: "Cashless Payment",
-    description: "Secure, contactless payments through mobile apps, cards, or digital wallets.",
-    icon: CreditCard,
-    color: "text-green-500",
-  },
-  {
-    title: "Remote Monitoring",
-    description: "Real-time inventory tracking and analytics dashboard for complete visibility and control.",
-    icon: BarChart3,
-    color: "text-purple-500",
-  },
-];
-
-const additionalBenefits = [
-  {
-    title: "Secure & Safe",
-    description: "Advanced security features including cameras, access controls, and fraud prevention.",
-    icon: Shield,
-    color: "text-grabbix-teal",
-  },
-  {
-    title: "Eco-Friendly",
-    description: "Energy-efficient design with smart power management and sustainable operations.",
-    icon: Leaf,
-    color: "text-grabbix-teal",
-  },
-  {
-    title: "Easy Maintenance",
-    description: "Self-diagnosing systems with predictive maintenance and remote troubleshooting.",
-    icon: Settings,
-    color: "text-grabbix-teal",
+    number: "3",
+    title: "Wallet-less",
+    description: "Set up an account once, shop 24/7. No messy bills or credit cards; all anyone needs to shop is a phone.",
   },
 ];
 
@@ -53,41 +23,38 @@ export default function Benefits() {
     <section id="benefits" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-grabbix-dark mb-4">Why Choose Grabbix</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Experience the future of retail with our innovative smart store technology
-          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-grabbix-dark mb-4">The benefits of having a Grabbix</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {mainBenefits.map((benefit, index) => {
-            const IconComponent = benefit.icon;
-            return (
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-white rounded-2xl shadow-lg flex items-center justify-center mx-auto mb-6 group-hover:shadow-xl transition-shadow duration-300">
-                  <IconComponent className={`h-12 w-12 ${benefit.color}`} />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Benefits List - Left Side */}
+          <div className="space-y-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-4">
+                {/* Number Circle */}
+                <div className="flex-shrink-0 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center font-bold text-sm">
+                  {benefit.number}
                 </div>
-                <h3 className="text-xl font-semibold text-grabbix-dark mb-3">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
+                
+                {/* Content */}
+                <div>
+                  <h3 className="text-2xl font-bold text-grabbix-dark mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600 text-lg leading-relaxed">{benefit.description}</p>
+                </div>
               </div>
-            );
-          })}
-        </div>
+            ))}
+          </div>
 
-        {/* Additional Benefits Row - Same Style */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {additionalBenefits.map((benefit, index) => {
-            const IconComponent = benefit.icon;
-            return (
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-white rounded-2xl shadow-lg flex items-center justify-center mx-auto mb-6 group-hover:shadow-xl transition-shadow duration-300">
-                  <IconComponent className={`h-12 w-12 ${benefit.color}`} />
-                </div>
-                <h3 className="text-xl font-semibold text-grabbix-dark mb-3">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
-              </div>
-            );
-          })}
+          {/* Machine Image - Right Side */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="max-w-lg w-full">
+              <img
+                src={grabbixMachineImage}
+                alt="Grabbix Smart Store Machine"
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
