@@ -43,7 +43,7 @@ export default function HowItWorks() {
     <section id="how-it-works" className="py-20 bg-grabbix-light">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-grabbix-dark mb-4">How It Works</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-grabbix-dark mb-4">Want a Grabbix in your Space?</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Simple steps to transform your space with autonomous retail technology
           </p>

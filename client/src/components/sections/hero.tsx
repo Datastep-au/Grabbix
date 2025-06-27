@@ -1,5 +1,6 @@
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroImage from "@assets/Grabbix Hero Image-min_1750989568279.png";
 
 export default function Hero() {
   const scrollToSection = (id: string) => {
@@ -11,19 +12,14 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Video */}
+      {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
-        {/* YouTube video embed as background */}
-        <div className="absolute inset-0 w-full h-full overflow-hidden">
-          <iframe
-            className="absolute top-1/2 left-1/2 w-[300%] h-[300%] transform -translate-x-1/2 -translate-y-1/2 opacity-30"
-            src="https://www.youtube.com/embed/Dj-qLfCnHv8?autoplay=1&mute=1&loop=1&playlist=Dj-qLfCnHv8&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1"
-            title="Background video"
-            allow="autoplay; encrypted-media"
-            style={{ border: 'none', pointerEvents: 'none' }}
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-grabbix-dark/80 to-grabbix-blue/60"></div>
+        <img
+          src={heroImage}
+          alt="Grabbix Smart Store"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-grabbix-dark/70 to-grabbix-blue/50"></div>
       </div>
 
       {/* Hero Content */}

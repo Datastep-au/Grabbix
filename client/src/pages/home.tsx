@@ -1,6 +1,7 @@
 import Navigation from "@/components/sections/navigation";
 import Hero from "@/components/sections/hero";
 import ProductsShowcase from "@/components/sections/products-showcase";
+import VideoShowcase from "@/components/sections/video-showcase";
 import HowItWorks from "@/components/sections/how-it-works";
 import Benefits from "@/components/sections/benefits";
 import UseCases from "@/components/sections/use-cases";
@@ -13,6 +14,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <ProductsShowcase />
+      <VideoShowcase />
       <HowItWorks />
       <Benefits />
       <UseCases />
