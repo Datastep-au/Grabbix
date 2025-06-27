@@ -41,11 +41,11 @@ export default function ProductsShowcase() {
               key={index}
               className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden"
             >
-              <div className="aspect-video overflow-hidden">
+              <div className="h-80 overflow-hidden">
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
               <div className="p-8">
