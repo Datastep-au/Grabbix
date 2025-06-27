@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "wouter";
 import grabbixLogo from "@assets/Grabbix_Green_1750924809790.png";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,11 +18,27 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-      setIsMenuOpen(false);
+  const handleNavigation = (sectionId: string) => {
+    if (location === "/") {
+      // On home page, scroll to section
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+        setIsMenuOpen(false);
+      }
+    } else {
+      // On other pages, navigate to home page with hash
+      window.location.href = `/#${sectionId}`;
+    }
+  };
+
+  const handleLogoClick = () => {
+    if (location === "/") {
+      // On home page, scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      // On other pages, navigate to home
+      window.location.href = "/";
     }
   };
 
@@ -32,38 +50,40 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img src={grabbixLogo} alt="Grabbix Logo" className="h-8 w-auto" />
+            <button onClick={handleLogoClick} className="focus:outline-none">
+              <img src={grabbixLogo} alt="Grabbix Logo" className="h-8 w-auto" />
+            </button>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <button
-                onClick={() => scrollToSection("products-showcase")}
+                onClick={() => handleNavigation("products-showcase")}
                 className="text-gray-600 hover:text-grabbix-teal transition-colors duration-200"
               >
                 Products
               </button>
               <button
-                onClick={() => scrollToSection("how-it-works")}
+                onClick={() => handleNavigation("how-it-works")}
                 className="text-gray-600 hover:text-grabbix-teal transition-colors duration-200"
               >
                 How It Works
               </button>
               <button
-                onClick={() => scrollToSection("benefits")}
+                onClick={() => handleNavigation("benefits")}
                 className="text-gray-600 hover:text-grabbix-teal transition-colors duration-200"
               >
                 Benefits
               </button>
               <button
-                onClick={() => scrollToSection("use-cases")}
+                onClick={() => handleNavigation("use-cases")}
                 className="text-gray-600 hover:text-grabbix-teal transition-colors duration-200"
               >
                 Use Cases
               </button>
               <Button
-                onClick={() => scrollToSection("contact")}
+                onClick={() => handleNavigation("contact")}
                 className="bg-grabbix-teal text-white hover:bg-grabbix-teal/90"
               >
                 Get Started
@@ -89,31 +109,31 @@ export default function Navigation() {
           <div className="md:hidden bg-white border-t">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button
-                onClick={() => scrollToSection("how-it-works")}
-                className="block px-3 py-2 text-gray-600 hover:text-grabbix-teal w-full text-left"
-              >
-                How It Works
-              </button>
-              <button
-                onClick={() => scrollToSection("products-showcase")}
+                onClick={() => handleNavigation("products-showcase")}
                 className="block px-3 py-2 text-gray-600 hover:text-grabbix-teal w-full text-left"
               >
                 Products
               </button>
               <button
-                onClick={() => scrollToSection("benefits")}
+                onClick={() => handleNavigation("how-it-works")}
+                className="block px-3 py-2 text-gray-600 hover:text-grabbix-teal w-full text-left"
+              >
+                How It Works
+              </button>
+              <button
+                onClick={() => handleNavigation("benefits")}
                 className="block px-3 py-2 text-gray-600 hover:text-grabbix-teal w-full text-left"
               >
                 Benefits
               </button>
               <button
-                onClick={() => scrollToSection("use-cases")}
+                onClick={() => handleNavigation("use-cases")}
                 className="block px-3 py-2 text-gray-600 hover:text-grabbix-teal w-full text-left"
               >
                 Use Cases
               </button>
               <Button
-                onClick={() => scrollToSection("contact")}
+                onClick={() => handleNavigation("contact")}
                 className="block mx-3 bg-grabbix-teal text-white hover:bg-grabbix-teal/90 w-auto"
               >
                 Get Started

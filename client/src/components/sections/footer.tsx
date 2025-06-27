@@ -1,12 +1,20 @@
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import grabbixLogo from "@assets/Grabbix Logo small_1750991127164.png";
 
 export default function Footer() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+  const [location] = useLocation();
+
+  const handleNavigation = (sectionId: string) => {
+    if (location === "/") {
+      // On home page, scroll to section
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    } else {
+      // On other pages, navigate to home page with hash
+      window.location.href = `/#${sectionId}`;
     }
   };
 
@@ -40,7 +48,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-300">
               <li>
                 <button 
-                  onClick={() => scrollToSection("products-showcase")}
+                  onClick={() => handleNavigation("products-showcase")}
                   className="hover:text-grabbix-teal transition-colors duration-200 text-left"
                 >
                   Smart Store
@@ -48,7 +56,7 @@ export default function Footer() {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection("products-showcase")}
+                  onClick={() => handleNavigation("products-showcase")}
                   className="hover:text-grabbix-teal transition-colors duration-200 text-left"
                 >
                   Micro Market
@@ -56,7 +64,7 @@ export default function Footer() {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection("contact")}
+                  onClick={() => handleNavigation("contact")}
                   className="hover:text-grabbix-teal transition-colors duration-200 text-left"
                 >
                   Custom Solution
