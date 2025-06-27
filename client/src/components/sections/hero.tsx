@@ -27,10 +27,10 @@ export default function Hero() {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
           Where Convenience
           <br />
-          <span className="text-grabbix-teal">Meets Innovation</span>
+          Meets Innovation
         </h1>
-        <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto leading-relaxed">
-          Smart, secure, and fully autonomous micro-stores for your space.
+        <p className="text-xl md:text-2xl text-white font-bold mb-8 max-w-3xl mx-auto leading-relaxed">
+          Smart, Secure, and Fully managed, customizable retail for apartments, offices, hotels, and more.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button
