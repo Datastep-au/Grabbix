@@ -101,5 +101,6 @@ Preferred communication style: Simple, everyday language.
 ## Changelog
 
 Changelog:
+- July 8, 2025. Added React-based locations index page with all 51 Melbourne suburb links, integrated contact page with navigation/footer, enhanced contact forms with customerSize field (Less than 50, 50+, 80+, 150+, 500+), removed static HTML pages for full React integration
 - July 8, 2025. Added 51 location-specific landing pages for Melbourne suburbs with Python template system for SEO optimization
 - June 26, 2025. Initial setup

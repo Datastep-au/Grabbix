@@ -82,9 +82,9 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/index.html" className="hover:text-grabbix-teal transition-colors duration-200">
+                <Link href="/locations" className="hover:text-grabbix-teal transition-colors duration-200">
                   Melbourne Locations
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="hover:text-grabbix-teal transition-colors duration-200">
