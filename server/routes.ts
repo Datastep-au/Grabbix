@@ -27,6 +27,28 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Contact form submission endpoint for new contact page
+  app.post("/api/contacts", async (req, res) => {
+    try {
+      const validatedData = insertContactSchema.parse(req.body);
+      const contact = await storage.createContact(validatedData);
+      res.json({ success: true, contact });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        res.status(400).json({ 
+          success: false, 
+          message: "Invalid form data", 
+          errors: error.errors 
+        });
+      } else {
+        res.status(500).json({ 
+          success: false, 
+          message: "Failed to submit contact form" 
+        });
+      }
+    }
+  });
+
   // Get all contacts (for potential admin dashboard)
   app.get("/api/contacts", async (req, res) => {
     try {

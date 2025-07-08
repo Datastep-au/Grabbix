@@ -12,9 +12,12 @@ export const contacts = pgTable("contacts", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
   email: text("email").notNull(),
-  location: text("location").notNull(),
-  spaceType: text("space_type").notNull(),
+  phone: text("phone"),
+  company: text("company"),
+  location: text("location"),
+  spaceType: text("space_type"),
   message: text("message"),
+  customerSize: text("customer_size"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
@@ -26,9 +29,12 @@ export const insertUserSchema = createInsertSchema(users).pick({
 export const insertContactSchema = createInsertSchema(contacts).pick({
   name: true,
   email: true,
+  phone: true,
+  company: true,
   location: true,
   spaceType: true,
   message: true,
+  customerSize: true,
 });
 
 export type InsertUser = z.infer<typeof insertUserSchema>;

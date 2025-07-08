@@ -14,9 +14,12 @@ import { apiRequest } from "@/lib/queryClient";
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
+  phone: z.string().optional(),
+  company: z.string().optional(),
   location: z.string().min(2, "Location is required"),
   spaceType: z.string().min(1, "Please select a space type"),
   message: z.string().optional(),
+  customerSize: z.string().min(1, "Please select customer size"),
 });
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
@@ -30,9 +33,12 @@ export default function Contact() {
     defaultValues: {
       name: "",
       email: "",
+      phone: "",
+      company: "",
       location: "",
       spaceType: "",
       message: "",
+      customerSize: "",
     },
   });
 
@@ -155,6 +161,31 @@ export default function Contact() {
                           <SelectItem value="gym">Gym/Fitness Center</SelectItem>
                           <SelectItem value="retail">Retail Location</SelectItem>
                           <SelectItem value="other">Other</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="customerSize"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-base font-medium text-gray-700">How many potential customers or staff? *</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger className="h-12 text-base border-gray-300 focus:border-grabbix-teal focus:ring-grabbix-teal/20">
+                            <SelectValue placeholder="Select size range" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="Less than 50">Less than 50</SelectItem>
+                          <SelectItem value="50+">50+</SelectItem>
+                          <SelectItem value="80+">80+</SelectItem>
+                          <SelectItem value="150+">150+</SelectItem>
+                          <SelectItem value="500+">500+</SelectItem>
                         </SelectContent>
                       </Select>
                       <FormMessage />
