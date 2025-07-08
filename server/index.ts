@@ -47,6 +47,20 @@ app.use((req, res, next) => {
     throw err;
   });
 
+  // Serve static files for location pages and index.html before Vite middleware
+  app.use('/location_pages', express.static('location_pages', { 
+    setHeaders: (res, path) => {
+      if (path.endsWith('.html')) {
+        res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      }
+    }
+  }));
+  
+  // Serve the main location index.html
+  app.get('/index.html', (req, res) => {
+    res.sendFile('index.html', { root: process.cwd() });
+  });
+
   // importantly only setup vite in development and after
   // setting up all the other routes so the catch-all route
   // doesn't interfere with the other routes
