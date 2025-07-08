@@ -92,12 +92,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <button 
-                  onClick={() => handleNavigation("contact")}
+                <Link 
+                  href="/contact"
                   className="hover:text-grabbix-teal transition-colors duration-200 text-left"
                 >
                   Contact
-                </button>
+                </Link>
               </li>
             </ul>
           </div>

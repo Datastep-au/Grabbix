@@ -82,6 +82,12 @@ export default function Navigation() {
               >
                 Use Cases
               </button>
+              <Link
+                href="/contact"
+                className="text-gray-600 hover:text-grabbix-teal transition-colors duration-200"
+              >
+                Contact
+              </Link>
               <Button
                 onClick={() => handleNavigation("contact")}
                 className="bg-grabbix-teal text-white hover:bg-grabbix-teal/90"
@@ -132,6 +138,12 @@ export default function Navigation() {
               >
                 Use Cases
               </button>
+              <Link
+                href="/contact"
+                className="block px-3 py-2 text-gray-600 hover:text-grabbix-teal w-full text-left"
+              >
+                Contact
+              </Link>
               <Button
                 onClick={() => handleNavigation("contact")}
                 className="block mx-3 bg-grabbix-teal text-white hover:bg-grabbix-teal/90 w-auto"
