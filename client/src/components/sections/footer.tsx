@@ -82,14 +82,22 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href="/index.html" className="hover:text-grabbix-teal transition-colors duration-200">
+                  Melbourne Locations
+                </a>
+              </li>
+              <li>
                 <a href="#" className="hover:text-grabbix-teal transition-colors duration-200">
                   Careers
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-grabbix-teal transition-colors duration-200">
+                <button 
+                  onClick={() => handleNavigation("contact")}
+                  className="hover:text-grabbix-teal transition-colors duration-200 text-left"
+                >
                   Contact
-                </a>
+                </button>
               </li>
             </ul>
           </div>

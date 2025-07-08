@@ -34,6 +34,7 @@ This is a modern full-stack web application for Grabbix, a company that provides
 ### Frontend Components
 - **Landing Page Sections**: Hero, Navigation, How It Works, Products, Benefits, Use Cases, Contact, Footer
 - **Contact Form**: Validated form with real-time submission and toast notifications
+- **Location Pages**: 51 SEO-optimized suburb-specific landing pages for Melbourne generated via Python template system
 - **Responsive Design**: Mobile-first approach with Tailwind breakpoints
 - **Toast Notifications**: User feedback system for form submissions and errors
 
@@ -100,4 +101,5 @@ Preferred communication style: Simple, everyday language.
 ## Changelog
 
 Changelog:
+- July 8, 2025. Added 51 location-specific landing pages for Melbourne suburbs with Python template system for SEO optimization
 - June 26, 2025. Initial setup
