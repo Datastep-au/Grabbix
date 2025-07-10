@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import snacksStoreImage from "@assets/Snacks and Drinks Smart Store (1)_1750992249819.png";
-import microMarketImage from "@assets/Smart Stores - Micro Market_1750922185685.png";
+import microMarketImage from "@assets/Smart Stores - Micro Market-min_1752130129901.png";
 
 const products = [
   {
