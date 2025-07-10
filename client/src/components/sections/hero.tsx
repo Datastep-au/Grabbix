@@ -1,6 +1,6 @@
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@assets/hero-grabbix_1751895334904.jpg";
+import heroImage from "@assets/Grabbix_hero_3 (3)-min_1752131714013.jpg";
 
 export default function Hero() {
   const scrollToSection = (id: string) => {
