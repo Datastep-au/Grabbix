@@ -13,7 +13,7 @@ export default function VideoShowcase() {
           <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl bg-black">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/z9BNq3g9iZw"
+              src="https://www.youtube.com/embed/ZBBYBfYSI_U"
               title="Grabbix Product Showcase"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
