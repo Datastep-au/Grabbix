@@ -123,6 +123,43 @@ export default function Contact() {
 
                 <FormField
                   control={form.control}
+                  name="phone"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-base font-medium text-gray-700">Phone Number</FormLabel>
+                      <FormControl>
+                        <Input 
+                          type="tel" 
+                          placeholder="Enter your phone number" 
+                          className="h-12 text-base border-gray-300 focus:border-grabbix-teal focus:ring-grabbix-teal/20" 
+                          {...field} 
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="company"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-base font-medium text-gray-700">Company/Building Name</FormLabel>
+                      <FormControl>
+                        <Input 
+                          placeholder="Enter company or building name" 
+                          className="h-12 text-base border-gray-300 focus:border-grabbix-teal focus:ring-grabbix-teal/20" 
+                          {...field} 
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
                   name="location"
                   render={({ field }) => (
                     <FormItem>
