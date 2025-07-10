@@ -5,15 +5,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { MapPin } from "lucide-react";
 
 const melbourneLocations = [
-  "Melbourne CBD", "South Yarra", "Richmond", "Fitzroy", "St Kilda", "Carlton", 
-  "Prahran", "Collingwood", "Northcote", "Brunswick", "Hawthorn", "Camberwell", 
-  "Kew", "Toorak", "Armadale", "Malvern", "Glen Iris", "Ashburton", "Burwood", 
-  "Box Hill", "Doncaster", "Balwyn", "Templestowe", "Eltham", "Greensborough", 
-  "Heidelberg", "Ivanhoe", "Preston", "Reservoir", "Coburg", "Pascoe Vale", 
-  "Essendon", "Moonee Ponds", "Ascot Vale", "Flemington", "Kensington", 
-  "West Melbourne", "North Melbourne", "Parkville", "Footscray", "Yarraville", 
-  "Seddon", "Williamstown", "Altona", "Sunshine", "St Albans", "Deer Park", 
-  "Laverton", "Werribee", "Hoppers Crossing", "Point Cook", "Tarneit"
+  "Abbotsford", "Armadale", "Ashburton", "Balwyn", "Bentleigh", "Blackburn", "Box Hill", "Brighton", "Brunswick",
+  "Bulleen", "Burwood", "Camberwell", "Canterbury", "Caulfield", "Chadstone", "Cheltenham", "Clayton", "Coburg",
+  "Cremorne", "Dingley Village", "Doncaster", "Elsternwick", "Essendon", "Glen Iris", "Glen Waverley", "Hampton",
+  "Hawthorn", "Highett", "Kew", "Keysborough", "Kooyong", "Malvern", "Mentone", "Moorabbin", "Mordialloc",
+  "Mulgrave", "Noble Park", "Northcote", "Notting Hill", "Oakleigh", "Parkdale", "Pascoe Vale", "Prahran",
+  "Richmond", "Sandringham", "South Yarra", "Springvale", "St Kilda", "Strathmore", "Templestowe", "Toorak"
 ];
 
 export default function Locations() {

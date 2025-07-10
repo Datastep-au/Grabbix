@@ -25,40 +25,19 @@ const locationContactSchema = insertContactSchema.extend({
 
 type LocationContactData = z.infer<typeof locationContactSchema>;
 
-const locationData: { [key: string]: { title: string; description: string; benefits: string[] } } = {
-  "melbourne-cbd": {
-    title: "Melbourne CBD",
-    description: "Transform your CBD location with smart vending solutions perfect for busy office workers, tourists, and city dwellers who need convenient access to snacks and beverages.",
-    benefits: [
-      "Perfect for high-traffic office buildings",
-      "Ideal for corporate environments",
-      "24/7 service for shift workers",
-      "Contactless payment options",
-      "Premium product selection"
-    ]
-  },
-  "south-yarra": {
-    title: "South Yarra",
-    description: "Bring cutting-edge smart vending to South Yarra's trendy lifestyle with solutions tailored for young professionals and fashion-conscious residents.",
-    benefits: [
-      "Trendy product selection",
-      "Health-conscious options",
-      "Perfect for gyms and wellness centers",
-      "Stylish design integration",
-      "Quick grab-and-go solutions"
-    ]
-  },
-  "richmond": {
-    title: "Richmond",
-    description: "Enhance Richmond's creative atmosphere with smart vending solutions that complement the area's innovative spirit and diverse community.",
-    benefits: [
-      "Creative industry-focused products",
-      "Artisan snack selections",
-      "Eco-friendly options",
-      "Community-centered approach",
-      "Flexible placement options"
-    ]
-  }
+// Helper function to get nearby suburbs
+const getNearbySuburbs = (currentSuburb: string): string[] => {
+  const suburbs = [
+    "Abbotsford", "Armadale", "Ashburton", "Balwyn", "Bentleigh", "Blackburn", "Box Hill", "Brighton", "Brunswick",
+    "Bulleen", "Burwood", "Camberwell", "Canterbury", "Caulfield", "Chadstone", "Cheltenham", "Clayton", "Coburg",
+    "Cremorne", "Dingley Village", "Doncaster", "Elsternwick", "Essendon", "Glen Iris", "Glen Waverley", "Hampton",
+    "Hawthorn", "Highett", "Kew", "Keysborough", "Kooyong", "Malvern", "Mentone", "Moorabbin", "Mordialloc",
+    "Mulgrave", "Noble Park", "Northcote", "Notting Hill", "Oakleigh", "Parkdale", "Pascoe Vale", "Prahran",
+    "Richmond", "Sandringham", "South Yarra", "Springvale", "St Kilda", "Strathmore", "Templestowe", "Toorak"
+  ];
+  
+  const filtered = suburbs.filter(s => s !== currentSuburb);
+  return filtered.slice(0, 3); // Return first 3 different suburbs
 };
 
 export default function LocationPage() {
@@ -67,17 +46,7 @@ export default function LocationPage() {
   
   // Generate location data for any slug
   const locationName = slug ? slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) : "Melbourne Location";
-  const location = locationData[slug!] || {
-    title: locationName,
-    description: `Transform your ${locationName} location with smart vending solutions perfect for busy residents, workers, and visitors who need convenient access to snacks and beverages.`,
-    benefits: [
-      "Perfect for high-traffic areas",
-      "Ideal for office environments",
-      "24/7 contactless service",
-      "Customizable product selection",
-      "Professional installation"
-    ]
-  };
+  const nearbySuburbs = getNearbySuburbs(locationName);
 
   const form = useForm<LocationContactData>({
     resolver: zodResolver(locationContactSchema),
@@ -123,33 +92,148 @@ export default function LocationPage() {
       <div className="pt-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Smart Vending Solutions in {location.title}
+          <div className="mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Free Vending Service in {locationName}, Victoria – Smart, Custom & Contactless
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {location.description}
+            <p className="text-xl text-gray-600 mb-8">
+              Tired of overpaying on DoorDash or making late-night runs to the store? Grabbix offers a <strong>fully managed, free vending machine service in {locationName}</strong> — with AI-powered smart stores that serve snacks, drinks, essentials, and more. Our custom vending solution is perfect for residential buildings, gyms, offices, schools, and shared spaces.
             </p>
           </div>
 
+          {/* Main Content */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Benefits Section */}
-            <div className="lg:col-span-1">
-              <Card className="mb-6">
+            {/* Content Section */}
+            <div className="lg:col-span-2 space-y-8">
+              {/* Why Choose Section */}
+              <Card>
                 <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-grabbix-teal">
-                    Why Choose Grabbix in {location.title}?
+                  <CardTitle className="text-2xl font-bold text-grabbix-teal flex items-center">
+                    🧠 Why Choose Grabbix Smart Vending in {locationName}?
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
-                    {location.benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-grabbix-teal mt-0.5" />
-                        <span className="text-gray-700">{benefit}</span>
-                      </li>
-                    ))}
+                    <li className="flex items-start space-x-3">
+                      <span className="text-grabbix-teal">💸</span>
+                      <span>Cheaper than food delivery or store trips — instant access, 24/7</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <span className="text-grabbix-teal">⚙️</span>
+                      <span>Free Installation, Servicing & Replenishment</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <span className="text-grabbix-teal">🧃</span>
+                      <span>Custom Product Range – drinks, chips, healthy snacks, protein bars, chocolates</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <span className="text-grabbix-teal">📦</span>
+                      <span>Essential Goods – condoms, Tide Pods, frozen items, shampoo, more!</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <span className="text-grabbix-teal">🧠</span>
+                      <span>Smart Tech – secure, cashless, contactless access</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <span className="text-grabbix-teal">🛠️</span>
+                      <span>Flexible Stocking – change items anytime based on your staff or residents' feedback</span>
+                    </li>
                   </ul>
+                </CardContent>
+              </Card>
+
+              {/* Customised Section */}
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold text-grabbix-teal flex items-center">
+                    🛒 Fully Customised, Always Stocked
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700">
+                    We work closely with your team to handpick a product mix that matches your preferences — including healthy options, energy drinks, protein snacks, or everyday essentials. Our machines are flexible, and we'll adjust the contents anytime based on what your team actually wants.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Locations Section */}
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold text-grabbix-teal flex items-center">
+                    🏢 Ideal for Any Location in {locationName}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    <li>• Residential Apartments</li>
+                    <li>• Office Buildings</li>
+                    <li>• Schools, Colleges, & TAFEs</li>
+                    <li>• Hotels & Motels</li>
+                    <li>• Gyms & Fitness Studios</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* No Cost Section */}
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold text-grabbix-teal flex items-center">
+                    🚚 No Cost. No Catch. Just Convenience.
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700">
+                    Grabbix is a <strong>100% free service</strong> for your building or business. We handle everything — install, restock, monitor, and maintain. You just enjoy the perks.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Next Steps Section */}
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold text-grabbix-teal flex items-center">
+                    🔧 Next Steps: Easy Site Visit & Install
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 mb-4">
+                    We'll schedule a quick <strong>site visit in {locationName}</strong> to:
+                  </p>
+                  <ul className="space-y-2">
+                    <li>• Check doorway and lift access</li>
+                    <li>• Confirm the best install location</li>
+                    <li>• Schedule your machine install (often within days)</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Nearby Suburbs */}
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold text-grabbix-teal flex items-center">
+                    📍 Nearby Suburbs We Also Service
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700">
+                    Grabbix also operates in surrounding areas like {nearbySuburbs.join(', ')}.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Sidebar */}
+            <div className="lg:col-span-1">
+              <Card className="mb-6">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold text-grabbix-teal">
+                    ✅ Ready to Get Started?
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 mb-4">
+                    Contact us today to book your free site assessment in {locationName} and bring smart, contactless vending to your community.
+                  </p>
                 </CardContent>
               </Card>
 
@@ -194,7 +278,7 @@ export default function LocationPage() {
                     Get Your Free Consultation
                   </CardTitle>
                   <CardDescription>
-                    Fill out the form below and we'll contact you within 24 hours to discuss your smart vending solution for {location.title}.
+                    Fill out the form below and we'll contact you within 24 hours to discuss your smart vending solution for {locationName}.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
