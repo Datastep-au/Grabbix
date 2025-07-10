@@ -94,185 +94,136 @@ export default function LocationPage() {
           {/* Header */}
           <div className="mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Free Vending Service in {locationName}, Victoria – Smart, Custom & Contactless
+              Free Vending Machine Service in {locationName}
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Tired of overpaying on DoorDash or making late-night runs to the store? Grabbix offers a <strong>fully managed, free vending machine service in {locationName}</strong> — with AI-powered smart stores that serve snacks, drinks, essentials, and more. Our custom vending solution is perfect for residential buildings, gyms, offices, schools, and shared spaces.
-            </p>
           </div>
 
           {/* Main Content */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Content Section */}
             <div className="lg:col-span-2 space-y-8">
-              {/* Why Choose Section */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-grabbix-teal flex items-center">
-                    🧠 Why Choose Grabbix Smart Vending in {locationName}?
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    <li className="flex items-start space-x-3">
-                      <span className="text-grabbix-teal">💸</span>
-                      <span>Cheaper than food delivery or store trips — instant access, 24/7</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <span className="text-grabbix-teal">⚙️</span>
-                      <span>Free Installation, Servicing & Replenishment</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <span className="text-grabbix-teal">🧃</span>
-                      <span>Custom Product Range – drinks, chips, healthy snacks, protein bars, chocolates</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <span className="text-grabbix-teal">📦</span>
-                      <span>Essential Goods – condoms, Tide Pods, frozen items, shampoo, more!</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <span className="text-grabbix-teal">🧠</span>
-                      <span>Smart Tech – secure, cashless, contactless access</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <span className="text-grabbix-teal">🛠️</span>
-                      <span>Flexible Stocking – change items anytime based on your staff or residents' feedback</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+              {/* Introduction */}
+              <section>
+                <p className="text-lg text-gray-700 mb-6">
+                  Looking for a <strong>free vending machine service in {locationName}</strong> that's modern, reliable, and hassle-free? Grabbix installs smart, cashless vending machines in offices, apartments, gyms, schools, and hotels across {locationName} — and we do it all at no cost to you.
+                </p>
+              </section>
 
-              {/* Customised Section */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-grabbix-teal flex items-center">
-                    🛒 Fully Customised, Always Stocked
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-700">
-                    We work closely with your team to handpick a product mix that matches your preferences — including healthy options, energy drinks, protein snacks, or everyday essentials. Our machines are flexible, and we'll adjust the contents anytime based on what your team actually wants.
-                  </p>
-                </CardContent>
-              </Card>
+              {/* Why Choose */}
+              <section>
+                <h2 className="text-2xl font-bold text-grabbix-teal mb-4">
+                  Why More Places in {locationName} Choose Grabbix
+                </h2>
+                <p className="text-gray-700 mb-4">
+                  Grabbix isn't your old-school vending supplier. We bring:
+                </p>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start space-x-3">
+                    <span className="text-grabbix-teal">✔️</span>
+                    <span>Smart, contactless machines with secure cashless payments</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-grabbix-teal">✔️</span>
+                    <span>A curated mix of snacks, drinks, and essentials — including protein bars, energy drinks, healthy snacks, frozen meals, condoms, Tide Pods, and more</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-grabbix-teal">✔️</span>
+                    <span>Custom product selection based on your staff or residents' preferences, updated anytime</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-grabbix-teal">✔️</span>
+                    <span>Professional installation, restocking, and maintenance — all free</span>
+                  </li>
+                </ul>
+              </section>
 
-              {/* Locations Section */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-grabbix-teal flex items-center">
-                    🏢 Ideal for Any Location in {locationName}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    <li>• Residential Apartments</li>
-                    <li>• Office Buildings</li>
-                    <li>• Schools, Colleges, & TAFEs</li>
-                    <li>• Hotels & Motels</li>
-                    <li>• Gyms & Fitness Studios</li>
-                  </ul>
-                </CardContent>
-              </Card>
+              {/* Modern Lifestyles */}
+              <section>
+                <h2 className="text-2xl font-bold text-grabbix-teal mb-4">
+                  Designed for Modern Lifestyles
+                </h2>
+                <p className="text-gray-700">
+                  We know your people are busy. That's why we help you offer convenient, on-site access to the things they need most — whether that's a midday snack, a post-workout protein boost, or late-night essentials. Forget driving to the store or paying delivery fees. Grabbix is convenience, reinvented.
+                </p>
+              </section>
 
-              {/* No Cost Section */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-grabbix-teal flex items-center">
-                    🚚 No Cost. No Catch. Just Convenience.
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-700">
-                    Grabbix is a <strong>100% free service</strong> for your building or business. We handle everything — install, restock, monitor, and maintain. You just enjoy the perks.
-                  </p>
-                </CardContent>
-              </Card>
+              {/* How It Works */}
+              <section>
+                <h2 className="text-2xl font-bold text-grabbix-teal mb-4">
+                  How Our Free Vending Machine Service Works
+                </h2>
+                <ol className="space-y-3 text-gray-700">
+                  <li className="flex items-start space-x-3">
+                    <span className="text-grabbix-teal font-semibold">1.</span>
+                    <span>We visit your site in {locationName} to check access and recommend the best setup</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-grabbix-teal font-semibold">2.</span>
+                    <span>We install the machine, tailored to your location's needs</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-grabbix-teal font-semibold">3.</span>
+                    <span>We restock and maintain it — you never lift a finger or pay a cent</span>
+                  </li>
+                </ol>
+              </section>
 
-              {/* Next Steps Section */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-grabbix-teal flex items-center">
-                    🔧 Next Steps: Easy Site Visit & Install
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-700 mb-4">
-                    We'll schedule a quick <strong>site visit in {locationName}</strong> to:
-                  </p>
-                  <ul className="space-y-2">
-                    <li>• Check doorway and lift access</li>
-                    <li>• Confirm the best install location</li>
-                    <li>• Schedule your machine install (often within days)</li>
-                  </ul>
-                </CardContent>
-              </Card>
+              {/* Where We Work */}
+              <section>
+                <h2 className="text-2xl font-bold text-grabbix-teal mb-4">
+                  Where We Work in {locationName}
+                </h2>
+                <p className="text-gray-700 mb-4">
+                  We provide free vending machine services across:
+                </p>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start space-x-3">
+                    <span className="text-grabbix-teal">✔️</span>
+                    <span>Residential apartment buildings</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-grabbix-teal">✔️</span>
+                    <span>Corporate offices</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-grabbix-teal">✔️</span>
+                    <span>Fitness studios and gyms</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-grabbix-teal">✔️</span>
+                    <span>Schools and universities</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-grabbix-teal">✔️</span>
+                    <span>Hotels, motels, and co-living spaces</span>
+                  </li>
+                </ul>
+              </section>
 
-              {/* Nearby Suburbs */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-grabbix-teal flex items-center">
-                    📍 Nearby Suburbs We Also Service
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-700">
-                    Grabbix also operates in surrounding areas like {nearbySuburbs.join(', ')}.
-                  </p>
-                </CardContent>
-              </Card>
+              {/* Why Grabbix Stands Out */}
+              <section>
+                <h2 className="text-2xl font-bold text-grabbix-teal mb-4">
+                  Why Grabbix Stands Out
+                </h2>
+                <p className="text-gray-700">
+                  With Grabbix, you get more than a vending machine — you get a partner focused on delivering an exceptional, modern experience. We believe vending should be simple, flexible, and add value to your space. That's why we handle everything, so you can focus on what matters to you.
+                </p>
+              </section>
+
+              {/* Get Started */}
+              <section>
+                <h2 className="text-2xl font-bold text-grabbix-teal mb-4">
+                  Get Started with Grabbix in {locationName}
+                </h2>
+                <p className="text-gray-700">
+                  Interested in bringing a <strong>free vending machine service to your {locationName} location</strong>? Reach out today to schedule your free site assessment — and let's make it happen.
+                </p>
+              </section>
             </div>
 
             {/* Sidebar */}
             <div className="lg:col-span-1">
               <Card className="mb-6">
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-grabbix-teal">
-                    ✅ Ready to Get Started?
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-700 mb-4">
-                    Contact us today to book your free site assessment in {locationName} and bring smart, contactless vending to your community.
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Contact Info */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl font-bold text-grabbix-teal">
-                    Get In Touch
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <Phone className="h-5 w-5 text-grabbix-teal" />
-                    <div>
-                      <p className="font-semibold">Phone</p>
-                      <p className="text-gray-600">+61 3 XXXX XXXX</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Mail className="h-5 w-5 text-grabbix-teal" />
-                    <div>
-                      <p className="font-semibold">Email</p>
-                      <p className="text-gray-600">hello@grabbix.com</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Clock className="h-5 w-5 text-grabbix-teal" />
-                    <div>
-                      <p className="font-semibold">Response Time</p>
-                      <p className="text-gray-600">Within 24 hours</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <Card>
                 <CardHeader>
                   <CardTitle className="text-2xl font-bold text-grabbix-teal">
                     Get Your Free Consultation
@@ -284,64 +235,58 @@ export default function LocationPage() {
                 <CardContent>
                   <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <FormField
-                          control={form.control}
-                          name="name"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Full Name *</FormLabel>
-                              <FormControl>
-                                <Input placeholder="John Smith" {...field} />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        <FormField
-                          control={form.control}
-                          name="email"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Email Address *</FormLabel>
-                              <FormControl>
-                                <Input type="email" placeholder="john@example.com" {...field} />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                      </div>
-
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <FormField
-                          control={form.control}
-                          name="phone"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Phone Number</FormLabel>
-                              <FormControl>
-                                <Input placeholder="+61 4XX XXX XXX" {...field} />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        <FormField
-                          control={form.control}
-                          name="company"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Company/Building Name</FormLabel>
-                              <FormControl>
-                                <Input placeholder="ABC Company" {...field} />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                      </div>
-
+                      <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Full Name *</FormLabel>
+                            <FormControl>
+                              <Input placeholder="John Smith" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Email Address *</FormLabel>
+                            <FormControl>
+                              <Input type="email" placeholder="john@example.com" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="phone"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Phone Number</FormLabel>
+                            <FormControl>
+                              <Input placeholder="+61 4XX XXX XXX" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="company"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Company/Building Name</FormLabel>
+                            <FormControl>
+                              <Input placeholder="ABC Company" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
                       <FormField
                         control={form.control}
                         name="spaceType"
@@ -370,7 +315,6 @@ export default function LocationPage() {
                           </FormItem>
                         )}
                       />
-
                       <FormField
                         control={form.control}
                         name="customerSize"
@@ -395,7 +339,6 @@ export default function LocationPage() {
                           </FormItem>
                         )}
                       />
-
                       <FormField
                         control={form.control}
                         name="message"
@@ -413,7 +356,6 @@ export default function LocationPage() {
                           </FormItem>
                         )}
                       />
-
                       <Button
                         type="submit"
                         className="w-full bg-grabbix-teal hover:bg-teal-600 text-white"
