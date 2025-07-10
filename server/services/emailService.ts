@@ -88,10 +88,12 @@ export function getEmailService(): EmailService {
     };
 
     if (!config.apiKey) {
+      console.log('SendGrid API key is not configured - skipping email service');
       throw new Error('SendGrid API key is not configured');
     }
 
     if (!config.toEmail) {
+      console.log('Notification email is not configured - skipping email service');
       throw new Error('Notification email is not configured');
     }
 

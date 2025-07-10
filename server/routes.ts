@@ -7,14 +7,7 @@ import { getGoogleSheetsService } from "./services/googleSheets";
 import { getEmailService } from "./services/emailService";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Initialize Google Sheets on startup
-  try {
-    const googleSheetsService = getGoogleSheetsService();
-    await googleSheetsService.initializeSheet();
-    console.log('Google Sheets initialized successfully');
-  } catch (error) {
-    console.error('Failed to initialize Google Sheets:', error);
-  }
+  // Google Sheets service will be initialized lazily when needed
 
   // Contact form submission endpoint
   app.post("/api/contact", async (req, res) => {
@@ -22,19 +15,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const validatedData = insertContactSchema.parse(req.body);
       const contact = await storage.createContact(validatedData);
       
-      // Send to Google Sheets and email notification (async, don't wait)
+      // Send to Google Sheets (focus on this integration)
       try {
         const googleSheetsService = getGoogleSheetsService();
         await googleSheetsService.appendContactToSheet(contact);
+        console.log('Successfully added contact to Google Sheets');
       } catch (sheetsError) {
         console.error('Failed to add contact to Google Sheets:', sheetsError);
-      }
-      
-      try {
-        const emailService = getEmailService();
-        await emailService.sendContactNotification(contact);
-      } catch (emailError) {
-        console.error('Failed to send email notification:', emailError);
       }
       
       res.json({ success: true, contact });
@@ -60,19 +47,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const validatedData = insertContactSchema.parse(req.body);
       const contact = await storage.createContact(validatedData);
       
-      // Send to Google Sheets and email notification (async, don't wait)
+      // Send to Google Sheets (focus on this integration)
       try {
         const googleSheetsService = getGoogleSheetsService();
         await googleSheetsService.appendContactToSheet(contact);
+        console.log('Successfully added contact to Google Sheets');
       } catch (sheetsError) {
         console.error('Failed to add contact to Google Sheets:', sheetsError);
-      }
-      
-      try {
-        const emailService = getEmailService();
-        await emailService.sendContactNotification(contact);
-      } catch (emailError) {
-        console.error('Failed to send email notification:', emailError);
       }
       
       res.json({ success: true, contact });
