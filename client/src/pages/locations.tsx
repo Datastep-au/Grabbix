@@ -3,6 +3,7 @@ import Footer from "@/components/sections/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin } from "lucide-react";
+import SEOHead from "@/components/seo/SEOHead";
 
 const melbourneLocations = [
   "Abbotsford", "Armadale", "Ashburton", "Balwyn", "Bentleigh", "Blackburn", "Box Hill", "Brighton", "Brunswick",
@@ -14,8 +15,32 @@ const melbourneLocations = [
 ];
 
 export default function Locations() {
+  const locationsJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Grabbix Melbourne Locations",
+    "description": "Grabbix smart store locations across Melbourne suburbs",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Melbourne",
+      "addressRegion": "Victoria",
+      "addressCountry": "AU"
+    },
+    "areaServed": melbourneLocations.map(location => ({
+      "@type": "City",
+      "name": location + ", Victoria, Australia"
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEOHead
+        title="Grabbix Melbourne Locations - Smart Store Solutions Across 51+ Suburbs"
+        description="Discover Grabbix smart store locations across Melbourne. Serving 51+ suburbs including Richmond, South Yarra, Prahran, Brighton, and more with 24/7 contactless retail solutions for offices and apartments."
+        keywords="Grabbix Melbourne locations, smart stores Victoria, Melbourne suburbs retail, contactless shopping Melbourne, office amenities Victoria, apartment micro markets Melbourne"
+        canonical="https://grabbix.com/locations"
+        jsonLd={locationsJsonLd}
+      />
       <Navigation />
       <div className="pt-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

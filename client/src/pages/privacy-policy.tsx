@@ -1,9 +1,27 @@
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
+import SEOHead from "@/components/seo/SEOHead";
 
 export default function PrivacyPolicy() {
+  const privacyJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy Policy - Grabbix",
+    "description": "Privacy policy for Grabbix smart store solutions. Learn how we collect, use, and protect your personal information.",
+    "datePublished": "2025-01-01",
+    "dateModified": "2025-01-01"
+  };
+
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Privacy Policy - Grabbix Smart Store Solutions"
+        description="Privacy policy for Grabbix smart store solutions in Australia. Learn how we collect, use, and protect your personal information when using our services."
+        keywords="privacy policy, data protection, personal information, Grabbix privacy, smart store privacy"
+        canonical="https://grabbix.com/privacy-policy"
+        robots="noindex, nofollow"
+        jsonLd={privacyJsonLd}
+      />
       <Navigation />
       
       {/* Content */}

@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://grabbix.com/sitemap.xml
+
+# Optimize crawling
+Crawl-delay: 1
+
+# Block admin areas (if any)
+Disallow: /admin/
+Disallow: /api/
+
+# Allow specific paths
+Allow: /locations/
+Allow: /contact
+Allow: /privacy-policy
+Allow: /cookie-policy

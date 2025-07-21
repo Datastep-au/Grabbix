@@ -1,9 +1,27 @@
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
+import SEOHead from "@/components/seo/SEOHead";
 
 export default function CookiePolicy() {
+  const cookieJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage", 
+    "name": "Cookie Policy - Grabbix",
+    "description": "Cookie policy for Grabbix smart store solutions. Learn about cookies and tracking technologies we use.",
+    "datePublished": "2025-01-01",
+    "dateModified": "2025-01-01"
+  };
+
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Cookie Policy - Grabbix Smart Store Solutions"
+        description="Cookie policy for Grabbix smart store solutions in Australia. Learn about cookies and tracking technologies we use on our website."
+        keywords="cookie policy, website cookies, tracking technology, Grabbix cookies, web analytics"
+        canonical="https://grabbix.com/cookie-policy"
+        robots="noindex, nofollow"
+        jsonLd={cookieJsonLd}
+      />
       <Navigation />
       
       {/* Content */}

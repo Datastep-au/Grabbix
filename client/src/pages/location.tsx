@@ -4,6 +4,7 @@ import Footer from "@/components/sections/footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Clock, Users, Building2, Coffee, CheckCircle } from "lucide-react";
+import SEOHead from "@/components/seo/SEOHead";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
@@ -48,6 +49,25 @@ export default function LocationPage() {
   const locationName = slug ? slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) : "Melbourne Location";
   const nearbySuburbs = getNearbySuburbs(locationName);
 
+  const locationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": `Grabbix Smart Stores - ${locationName}`,
+    "description": `Smart store solutions in ${locationName}, Melbourne. AI-powered fridges and micro markets for offices and apartments.`,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": locationName,
+      "addressRegion": "Victoria",
+      "addressCountry": "AU"
+    },
+    "telephone": "+61-4311-854-35",
+    "email": "info@grabbix.com.au",
+    "areaServed": {
+      "@type": "City",
+      "name": `${locationName}, Victoria, Australia`
+    }
+  };
+
   const form = useForm<LocationContactData>({
     resolver: zodResolver(locationContactSchema),
     defaultValues: {
@@ -88,6 +108,13 @@ export default function LocationPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEOHead
+        title={`Free Vending Machine Service in ${locationName} - Grabbix Smart Stores`}
+        description={`Professional vending machine service in ${locationName}, Melbourne. Smart, contactless vending machines for offices, apartments, and businesses. Free installation and fully managed service. Call +61 4311 854 35.`}
+        keywords={`vending machine ${locationName}, smart vending ${locationName}, office vending ${locationName}, apartment vending machines, contactless vending Melbourne, free vending service ${locationName}`}
+        canonical={`https://grabbix.com/locations/${slug}`}
+        jsonLd={locationJsonLd}
+      />
       <Navigation />
       <div className="pt-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

@@ -15,6 +15,7 @@ import { insertContactSchema } from "@shared/schema";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
+import SEOHead from "@/components/seo/SEOHead";
 
 // Enhanced contact form schema
 const contactFormSchema = insertContactSchema.extend({
@@ -73,8 +74,34 @@ export default function Contact() {
     mutation.mutate(data);
   };
 
+  const contactJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Grabbix - Smart Store Solutions",
+    "description": "Get in touch with Grabbix for smart store solutions. Free consultation and site assessment available.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Grabbix",
+      "telephone": "+61-4311-854-35",
+      "email": "info@grabbix.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Melbourne",
+        "addressRegion": "Victoria",
+        "addressCountry": "AU"
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEOHead
+        title="Contact Grabbix - Smart Store Solutions | Get Your Free Consultation"
+        description="Contact Grabbix for AI-powered smart store solutions in Australia. Free consultation, site assessment, and custom quotes for offices, apartments, and shared spaces. Call +61 4311 854 35 or email info@grabbix.com.au"
+        keywords="contact Grabbix, smart store consultation, free site assessment, smart retail quote, Melbourne office solutions, apartment micro markets, contactless shopping setup"
+        canonical="https://grabbix.com/contact"
+        jsonLd={contactJsonLd}
+      />
       <Navigation />
       <div className="pt-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
