@@ -44,7 +44,7 @@ const additionalUseCases = [
   {
     title: "Student Housing",
     description: "Late-night study sessions made easier with 24/7 access to snacks, drinks, and school supplies.",
-    image: "https://images.unsplash.com/photo-1606761940869-e12114a8e978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+    image: studentHousingImage,
   },
 ];
 
