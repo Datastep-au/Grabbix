@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 import smartStoreImage from "@assets/Smart Store-min_1750924967033.png";
+import studentHousingImage from "@assets/rut-miit-hpRGrfOIybc-unsplash-min.jpg";
 
 const useCases = [
   {
