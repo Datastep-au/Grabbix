@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <img src={grabbixLogo} alt="Grabbix Logo" className="h-8 w-auto mb-4" />
             <p className="text-gray-300 mb-4 max-w-md">
-              Revolutionizing retail convenience through AI-powered smart stores and autonomous checkout technology.
+              Revolutionising retail convenience through AI-powered smart stores and autonomous checkout technology.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-grabbix-teal transition-colors duration-200">
