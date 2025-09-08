@@ -1,0 +1,427 @@
+{
+  "pages": [
+    {
+      "slug": "offices",
+      "route": "/use-cases/offices",
+      "metaTitle": "Office Vending Machines in Melbourne | Grabbix",
+      "metaDescription": "Office vending machines, smart and traditional, in Melbourne. Cashless 24/7, fully managed, healthy options. Free install and support.",
+      "canonical": "https://grabbix.com.au/use-cases/offices",
+      "hero": {
+        "h1": "Office Vending Machines That Keep Teams Happy and Onsite",
+        "subhead": "Smart, cashless and fully managed vending for workplaces of any size.",
+        "image": "/images/use-cases/offices-hero.jpg",
+        "alt": "Office breakroom with a Grabbix vending smart store"
+      },
+      "intro": "Give your team convenient access to snacks, drinks and essentials without leaving the building. Grabbix installs smart, cashless vending in your breakroom, tailored to your people and your space, with zero cost to you.",
+      "smartOrTraditional": {
+        "title": "Smart or Traditional, Your Choice",
+        "body": "Prefer a classic set-up or want a hybrid roll-out? Alongside our next generation smart stores, Grabbix also supplies traditional vending machines where they suit the space or budget. Our new smart machines are built on deep hands-on experience running conventional vending, so planograms, pricing, servicing and reliability are nailed from day one.",
+        "links": [
+          {"label": "smart stores", "href": "/products/smart-store"},
+          {"label": "traditional vending machines", "href": "/products/traditional-vending"}
+        ]
+      },
+      "benefits": [
+        "Improves productivity by reducing trips offsite",
+        "Healthier choices that support wellbeing programmes",
+        "Cashless, contactless and secure access 24/7",
+        "Fully managed service with restocking and maintenance",
+        "Real-time inventory and responsive product rotation",
+        "Scales from small offices to multi-floor sites",
+        "Traditional vending machines available or hybrid smart plus traditional"
+      ],
+      "steps": [
+        "We assess your office and recommend the best layout.",
+        "We install the smart store and stock a curated range.",
+        "We monitor performance, restock and optimise the planogram."
+      ],
+      "productMix": [
+        "Protein bars and nuts",
+        "Fruit snacks and low sugar options",
+        "Energy drinks, soft drinks and water",
+        "Heat-and-eat meals and quick breakfasts",
+        "Sanitary and everyday essentials"
+      ],
+      "localNote": "Available across Melbourne and inner suburbs. Check our Locations to confirm coverage.",
+      "miniCaseStudy": {
+        "title": "Mini Case Study",
+        "body": "Placeholder: Company, team size, number of machines, usage rate and satisfaction uplift. Replace with your next office deployment.",
+        "enabled": false
+      },
+      "faqs": [
+        {
+          "q": "Do we pay for the machine?",
+          "a": "No. Installation and servicing are free. You only pay for products purchased by staff."
+        },
+        {
+          "q": "Can we request specific products?",
+          "a": "Yes. We co-curate the range with you and adjust it using sales data and staff feedback."
+        },
+        {
+          "q": "What about out-of-hours access?",
+          "a": "Machines are secure and available 24/7 with pre-authorised card access."
+        },
+        {
+          "q": "Do you also offer traditional vending machines?",
+          "a": "Yes. We can deploy traditional units on their own or alongside a smart store. Many offices start with a hybrid layout and adjust using real sales data. Traditional units are cashless by default and fully managed."
+        }
+      ],
+      "faqSchema": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question","name": "Do we pay for the machine?","acceptedAnswer":{"@type":"Answer","text":"No. Installation and servicing are free. You only pay for products purchased by staff."}},
+          {"@type": "Question","name": "Can we request specific products?","acceptedAnswer":{"@type":"Answer","text":"Yes. We co-curate the range with you and adjust it using sales data and staff feedback."}},
+          {"@type": "Question","name": "What about out-of-hours access?","acceptedAnswer":{"@type":"Answer","text":"Machines are secure and available 24/7 with pre-authorised card access."}},
+          {"@type": "Question","name": "Do you also offer traditional vending machines?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can deploy traditional units on their own or alongside a smart store. Many offices start with a hybrid layout and adjust using real sales data. Traditional units are cashless by default and fully managed."}}
+        ]
+      },
+      "cta": {
+        "title": "Book Your Free Office Assessment",
+        "body": "Tell us about your team and floorplan and we will propose the ideal mix of smart and traditional vending.",
+        "buttonLabel": "Get Free Consultation",
+        "buttonHref": "/contact"
+      }
+    },
+
+    {
+      "slug": "apartments",
+      "route": "/use-cases/apartments",
+      "metaTitle": "Apartment Vending Machines for Residents | Grabbix",
+      "metaDescription": "Apartment vending machines for residents, smart and traditional. Cashless 24/7 amenity, fully managed with free install.",
+      "canonical": "https://grabbix.com.au/use-cases/apartments",
+      "hero": {
+        "h1": "A Premium Amenity Residents Actually Use",
+        "subhead": "Convenient micro-markets for lobbies and common areas.",
+        "image": "/images/use-cases/apartments-hero.jpg",
+        "alt": "Apartment lobby with a Grabbix smart store"
+      },
+      "intro": "Turn lobbies and common areas into convenient micro-markets. Residents get late-night snacks and forgotten essentials without leaving the building, and you add real value to the property.",
+      "smartOrTraditional": {
+        "title": "Smart or Traditional, Your Choice",
+        "body": "We can fit a compact smart fridge, a small micro market or a traditional machine. Hybrid layouts work well for residential sites with mixed needs. Our smart range is informed by years of operating traditional vending, so reliability and stock rotation are covered.",
+        "links": [
+          {"label": "smart stores", "href": "/products/smart-store"},
+          {"label": "traditional vending machines", "href": "/products/traditional-vending"}
+        ]
+      },
+      "benefits": [
+        "Increases perceived property value and resident satisfaction",
+        "24/7 access to snacks, drinks and essentials",
+        "Cashless, secure, resident-only access",
+        "Fully managed service with restocking and maintenance",
+        "Optional revenue share",
+        "Traditional vending machines available or hybrid smart plus traditional"
+      ],
+      "steps": [
+        "Site survey for a visible shared area.",
+        "Install the unit(s) and configure resident access.",
+        "Monitor, restock and refine the range by building preference."
+      ],
+      "productMix": [
+        "Still and sparkling water",
+        "Heat-and-eat meals and noodles",
+        "Milk drinks and ice coffees",
+        "Hygiene and household essentials",
+        "Pet treats for pet friendly buildings"
+      ],
+      "faqs": [
+        {"q":"Is there any cost to owners corporation or building management?","a":"No. Installation and servicing are free. You only pay for items purchased by residents."},
+        {"q":"How do you prevent misuse?","a":"Resident-only access with pre-authorised card unlock, camera analytics and secure smart lock."},
+        {"q":"Do you also offer traditional vending machines?","a":"Yes. We can deploy traditional units or mix them with smart stores for high throughput areas like lifts and car parks."}
+      ],
+      "faqSchema": {
+        "@context":"https://schema.org","@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"Is there any cost to owners corporation or building management?","acceptedAnswer":{"@type":"Answer","text":"No. Installation and servicing are free. You only pay for items purchased by residents."}},
+          {"@type":"Question","name":"How do you prevent misuse?","acceptedAnswer":{"@type":"Answer","text":"Resident-only access with pre-authorised card unlock, camera analytics and secure smart lock."}},
+          {"@type":"Question","name":"Do you also offer traditional vending machines?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can deploy traditional units or mix them with smart stores for high throughput areas like lifts and car parks."}}
+        ]
+      },
+      "cta": {
+        "title":"Add a Premium Resident Amenity",
+        "body":"We will recommend a layout that fits your lobby and traffic patterns.",
+        "buttonLabel":"Speak to Us",
+        "buttonHref":"/contact"
+      }
+    },
+
+    {
+      "slug": "coworking",
+      "route": "/use-cases/coworking",
+      "metaTitle": "Vending for Co-working Spaces | Grabbix",
+      "metaDescription": "Vending for co-working spaces, smart and traditional. Premium amenity, cashless 24/7, fully managed.",
+      "canonical": "https://grabbix.com.au/use-cases/coworking",
+      "hero": {
+        "h1": "Keep Members Energised Between Meetings",
+        "subhead": "A premium amenity that fits your brand and keeps members onsite.",
+        "image": "/images/use-cases/coworking-hero.jpg",
+        "alt": "Co-working kitchen area with a Grabbix smart store"
+      },
+      "intro": "Co-working thrives on great amenities. Grabbix adds a smart, stylish store that fits your brand and keeps members onsite.",
+      "smartOrTraditional": {
+        "title":"Smart or Traditional, Your Choice",
+        "body":"Choose a compact smart fridge, a two-door micro market, a traditional machine or a hybrid. Our traditional operations experience informs product curation and price points for shared workspaces.",
+        "links":[
+          {"label":"smart stores","href":"/products/smart-store"},
+          {"label":"traditional vending machines","href":"/products/traditional-vending"}
+        ]
+      },
+      "benefits":[
+        "Premium amenity that helps attract and retain members",
+        "Branding options to match your space",
+        "Low footprint and quiet operation",
+        "Data-driven product curation",
+        "24/7 access for hot-desk users",
+        "Traditional vending machines available or hybrid smart plus traditional"
+      ],
+      "steps":[
+        "Assess footfall and member profile.",
+        "Select a single smart store, micro market or hybrid.",
+        "Install, stock and monitor. Rotate by member preference."
+      ],
+      "productMix":[
+        "Specialty and low sugar drinks",
+        "Healthier snacks and nut mixes",
+        "Grab-and-go meals and wraps",
+        "After hours coffee alternatives"
+      ],
+      "faqs":[
+        {"q":"Can we add our brand to the machine?","a":"Yes. We can apply tasteful branding to align with your interior."},
+        {"q":"Is noise an issue?","a":"Units are quiet and suitable for shared spaces. We will position away from meeting rooms where needed."},
+        {"q":"Do you also offer traditional vending machines?","a":"Yes. We can add a traditional unit for peak times or niche products and run it alongside a smart store."}
+      ],
+      "faqSchema":{
+        "@context":"https://schema.org","@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"Can we add our brand to the machine?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can apply tasteful branding to align with your interior."}},
+          {"@type":"Question","name":"Is noise an issue?","acceptedAnswer":{"@type":"Answer","text":"Units are quiet and suitable for shared spaces. We will position away from meeting rooms where needed."}},
+          {"@type":"Question","name":"Do you also offer traditional vending machines?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can add a traditional unit for peak times or niche products and run it alongside a smart store."}}
+        ]
+      },
+      "cta":{"title":"Request a Co-working Proposal","body":"Show us your kitchen or lounge footprint and we will map the ideal configuration.","buttonLabel":"Get Proposal","buttonHref":"/contact"}
+    },
+
+    {
+      "slug": "gyms",
+      "route": "/use-cases/gyms",
+      "metaTitle": "Healthy Vending for Gyms & Fitness Centres | Grabbix",
+      "metaDescription": "Healthy gym vending, smart and traditional. Protein snacks, hydration, cashless 24/7, fully managed.",
+      "canonical": "https://grabbix.com.au/use-cases/gyms",
+      "hero": {
+        "h1": "Fuel Performance Before and After Workouts",
+        "subhead": "Clean, healthy range with cashless checkout for members.",
+        "image": "/images/use-cases/gyms-hero.jpg",
+        "alt": "Gym entrance with a Grabbix vending smart store"
+      },
+      "intro": "Help members refuel without leaving the club. Grabbix delivers a healthy, gym-ready range with cashless checkout.",
+      "smartOrTraditional": {
+        "title":"Smart or Traditional, Your Choice",
+        "body":"Run a protein-heavy smart store, a traditional drinks machine or both. Our traditional vending background ensures reliable supply of popular SKUs during peak hours.",
+        "links":[
+          {"label":"smart stores","href":"/products/smart-store"},
+          {"label":"traditional vending machines","href":"/products/traditional-vending"}
+        ]
+      },
+      "benefits":[
+        "Protein-forward range that rotates by season",
+        "Cold drinks held at the right temperature",
+        "Optional staff or member discounting",
+        "Secure for 24/7 gym access",
+        "Zero operational lift for your team",
+        "Traditional vending machines available or hybrid smart plus traditional"
+      ],
+      "steps":[
+        "Assess entry or lounge location and member flow.",
+        "Install preferred format and set pricing.",
+        "Monitor usage and rotate lines to match training cycles."
+      ],
+      "productMix":[
+        "Protein bars and cookies",
+        "Ready-to-drink protein",
+        "Electrolytes and BCAAs",
+        "Energy drinks and low sugar snacks"
+      ],
+      "faqs":[
+        {"q":"What about shelf life for protein products?","a":"We manage expiry rotation and keep a tight range that moves quickly."},
+        {"q":"Can we request specific brands?","a":"Yes. We will source requested lines where viable and test them against sales data."},
+        {"q":"Do you also offer traditional vending machines?","a":"Yes. A traditional drinks unit can be paired with a smart store for heavy peak usage."}
+      ],
+      "faqSchema":{
+        "@context":"https://schema.org","@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"What about shelf life for protein products?","acceptedAnswer":{"@type":"Answer","text":"We manage expiry rotation and keep a tight range that moves quickly."}},
+          {"@type":"Question","name":"Can we request specific brands?","acceptedAnswer":{"@type":"Answer","text":"Yes. We will source requested lines where viable and test them against sales data."}},
+          {"@type":"Question","name":"Do you also offer traditional vending machines?","acceptedAnswer":{"@type":"Answer","text":"Yes. A traditional drinks unit can be paired with a smart store for heavy peak usage."}}
+        ]
+      },
+      "cta":{"title":"Add Grabbix to Your Gym","body":"We will recommend a format and planogram that suits your members and hours.","buttonLabel":"Start Now","buttonHref":"/contact"}
+    },
+
+    {
+      "slug": "students",
+      "route": "/use-cases/students",
+      "metaTitle": "Student Vending Machines for Campuses & Housing | Grabbix",
+      "metaDescription": "Student vending on campus and in housing, smart and traditional. Reliable 24/7, cashless, fully managed.",
+      "canonical": "https://grabbix.com.au/use-cases/students",
+      "hero": {
+        "h1": "24/7 Convenience That Fits Student Life",
+        "subhead": "Safe, cashless vending for study sessions and late arrivals.",
+        "image": "/images/use-cases/students-hero.jpg",
+        "alt": "Student common room with a Grabbix vending smart store"
+      },
+      "intro": "Support late-night study and early classes with a secure, cashless option on campus or inside student housing.",
+      "smartOrTraditional": {
+        "title":"Smart or Traditional, Your Choice",
+        "body":"Deploy smart stores in libraries and housing, add traditional machines for lecture hall corridors. Our traditional experience helps set the right price points for student budgets.",
+        "links":[
+          {"label":"smart stores","href":"/products/smart-store"},
+          {"label":"traditional vending machines","href":"/products/traditional-vending"}
+        ]
+      },
+      "benefits":[
+        "Multiple dietary options with clear labelling",
+        "Easy support for refunds and queries",
+        "Access controls for secure locations",
+        "Peak-time analytics to match stock to demand",
+        "Traditional vending machines available or hybrid smart plus traditional"
+      ],
+      "steps":[
+        "Confirm placement approvals.",
+        "Install units with appropriate access controls.",
+        "Monitor usage patterns and rotate stock for peak periods."
+      ],
+      "productMix":[
+        "Noodles and heat-and-eat meals",
+        "Energy drinks, soft drinks and water",
+        "Study essentials like tissues and pain relief subject to policy",
+        "Culturally diverse snacks"
+      ],
+      "faqs":[
+        {"q":"Can these be placed in libraries or labs?","a":"Yes. We work with your facilities team on suitable placement and noise considerations."},
+        {"q":"How are refunds handled?","a":"Refunds are simple and handled by our support team, not campus staff."},
+        {"q":"Do you also offer traditional vending machines?","a":"Yes. Traditional units are useful in high traffic corridors and can complement smart stores in housing."}
+      ],
+      "faqSchema":{
+        "@context":"https://schema.org","@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"Can these be placed in libraries or labs?","acceptedAnswer":{"@type":"Answer","text":"Yes. We work with your facilities team on suitable placement and noise considerations."}},
+          {"@type":"Question","name":"How are refunds handled?","acceptedAnswer":{"@type":"Answer","text":"Refunds are simple and handled by our support team, not campus staff."}},
+          {"@type":"Question","name":"Do you also offer traditional vending machines?","acceptedAnswer":{"@type":"Answer","text":"Yes. Traditional units are useful in high traffic corridors and can complement smart stores in housing."}}
+        ]
+      },
+      "cta":{"title":"Plan Vending for Your Campus","body":"We will map placements and a student friendly range for each building.","buttonLabel":"Talk to Us","buttonHref":"/contact"}
+    },
+
+    {
+      "slug": "healthcare",
+      "route": "/use-cases/healthcare",
+      "metaTitle": "Vending for Aged Care & Healthcare Staff | Grabbix",
+      "metaDescription": "Vending for aged care and healthcare, smart and traditional. Hygienic, cashless 24/7, fully managed.",
+      "canonical": "https://grabbix.com.au/use-cases/healthcare",
+      "hero": {
+        "h1": "Reliable, Hygienic Vending for Staff and Visitors",
+        "subhead": "Secure, contactless access for round-the-clock teams and guests.",
+        "image": "/images/use-cases/healthcare-hero.jpg",
+        "alt": "Healthcare staff room with a Grabbix vending smart store"
+      },
+      "intro": "Round-the-clock teams need round-the-clock access. Grabbix provides secure, hygienic machines with contactless payment and controlled access.",
+      "smartOrTraditional": {
+        "title":"Smart or Traditional, Your Choice",
+        "body":"Install smart units in staff areas and traditional machines in public corridors if preferred. Our traditional operations know-how ensures dependable servicing and stock availability for night shifts.",
+        "links":[
+          {"label":"smart stores","href":"/products/smart-store"},
+          {"label":"traditional vending machines","href":"/products/traditional-vending"}
+        ]
+      },
+      "benefits":[
+        "Suitable for staff rooms, waiting areas and late shifts",
+        "Contactless checkout for hygiene",
+        "Fresh and ambient options with temperature monitoring",
+        "Fully managed so clinical teams can focus on care",
+        "Proven uplift in staff engagement from similar deployments",
+        "Traditional vending machines available or hybrid smart plus traditional"
+      ],
+      "steps":[
+        "Survey the site for staff and visitor access paths.",
+        "Install the agreed format and set access controls.",
+        "Monitor and restock on schedules aligned to shifts."
+      ],
+      "productMix":[
+        "Ready meals and soups",
+        "Low sugar and hydration drinks",
+        "Coffee and comfort snacks",
+        "Visitor friendly items"
+      ],
+      "faqs":[
+        {"q":"Can you align stock with staff wellness goals?","a":"Yes. We can bias the range to healthier choices and display clear nutritional information."},
+        {"q":"How do you handle refunds or issues?","a":"Our support handles these directly. No extra work for your staff."},
+        {"q":"Do you also offer traditional vending machines?","a":"Yes. We can provide secure traditional units where preferred and run them alongside smart stores."}
+      ],
+      "faqSchema":{
+        "@context":"https://schema.org","@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"Can you align stock with staff wellness goals?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can bias the range to healthier choices and display clear nutritional information."}},
+          {"@type":"Question","name":"How do you handle refunds or issues?","acceptedAnswer":{"@type":"Answer","text":"Our support handles these directly. No extra work for your staff."}},
+          {"@type":"Question","name":"Do you also offer traditional vending machines?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can provide secure traditional units where preferred and run them alongside smart stores."}}
+        ]
+      },
+      "cta":{"title":"Book a Staff Lounge Trial","body":"We will configure a mix that supports your teams across all shifts.","buttonLabel":"Get Started","buttonHref":"/contact"}
+    },
+
+    {
+      "slug": "hotels",
+      "route": "/use-cases/hotels",
+      "metaTitle": "Guest Vending Solutions for Hotels & Motels | Grabbix",
+      "metaDescription": "Hotel vending, smart and traditional. Late night snacks and essentials, cashless 24/7, fully managed.",
+      "canonical": "https://grabbix.com.au/use-cases/hotels",
+      "hero": {
+        "h1": "Late Night Convenience That Improves Reviews",
+        "subhead": "Give guests a simple way to grab snacks and essentials when other options are closed.",
+        "image": "/images/use-cases/hotels-hero.jpg",
+        "alt": "Hotel lobby with a Grabbix vending smart store"
+      },
+      "intro": "Offer guests a convenient on-site option for snacks and essentials. Compact footprint and a premium look to suit modern lobbies.",
+      "smartOrTraditional": {
+        "title":"Smart or Traditional, Your Choice",
+        "body":"Place a smart store near reception or add traditional units on lift landings for larger properties. Our traditional vending heritage means smooth operations and reliable replenishment across floors.",
+        "links":[
+          {"label":"smart stores","href":"/products/smart-store"},
+          {"label":"traditional vending machines","href":"/products/traditional-vending"}
+        ]
+      },
+      "benefits":[
+        "Reduces front desk requests for small items",
+        "Always open for late check-ins",
+        "Range tailored to your guest profile",
+        "Optional placement across multiple floors",
+        "Traditional vending machines available or hybrid smart plus traditional"
+      ],
+      "steps":[
+        "Walkthrough to pick lobby and floor locations.",
+        "Install chosen format and set guest friendly pricing.",
+        "Monitor usage and rotate products by season and guest mix."
+      ],
+      "productMix":[
+        "Artisan and classic snacks",
+        "Bottled water and soft drinks",
+        "Toothbrush kits and travel essentials",
+        "Chargers and simple OTC basics subject to venue policy"
+      ],
+      "faqs":[
+        {"q":"Can we brand the machine to match our lobby?","a":"Yes. We can supply tasteful branding panels."},
+        {"q":"How are reconciliations handled?","a":"Cashless takings are reconciled and reported. No cash to manage."},
+        {"q":"Do you also offer traditional vending machines?","a":"Yes. Traditional units can complement a smart store on guest floors for convenience."}
+      ],
+      "faqSchema":{
+        "@context":"https://schema.org","@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"Can we brand the machine to match our lobby?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can supply tasteful branding panels."}},
+          {"@type":"Question","name":"How are reconciliations handled?","acceptedAnswer":{"@type":"Answer","text":"Cashless takings are reconciled and reported. No cash to manage."}},
+          {"@type":"Question","name":"Do you also offer traditional vending machines?","acceptedAnswer":{"@type":"Answer","text":"Yes. Traditional units can complement a smart store on guest floors for convenience."}}
+        ]
+      },
+      "cta":{"title":"Plan a Lobby and Floor Layout","body":"We will propose a configuration that suits your lobby aesthetics and guest flows.","buttonLabel":"Request Plan","buttonHref":"/contact"}
+    }
+  ]
+}

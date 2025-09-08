@@ -1,0 +1,78 @@
+Goal: Add seven SEO landing pages to the website for key spaces. Pages must be static, fast, and styled to match the current site. Include schema, internal links, and a contact CTA. All copy is provided in pages.json attached.
+
+Tech requirements:
+
+Stack: Next.js with Tailwind CSS. No server code needed.
+
+Create a route group at /use-cases/ for these pages.
+
+Each page reads content from pages.json.
+
+Components: PageHead, Hero, Prose, FeatureList, Steps, ProductMix, FAQ, CTA, Breadcrumbs.
+
+Insert JSON-LD FAQ in <Head> for each page.
+
+Add canonical to <Head> as https://grabbix.com.au/use-cases/[slug].
+
+Internal links to existing routes:
+
+Smart Store: /products/smart-store
+
+Micro Market: /products/micro-market
+
+Traditional Vending: /products/traditional-vending
+
+Locations: /locations
+
+Contact: /contact
+
+Image handling: use one hero image per page from /public/images/use-cases/ with meaningful alt. Use temporary placeholders if needed and keep filenames predictable, e.g. offices-hero.jpg.
+
+No symbol “—”. Use normal hyphens.
+
+Mobile first, pass Lighthouse basics.
+
+Render order per page:
+Breadcrumbs
+Hero (H1 + subhead)
+Intro paragraph
+Smart or Traditional block
+FeatureList (benefits)
+Steps
+ProductMix
+LocalNote (if present)
+MiniCaseStudy (if present)
+FAQ
+CTA
+
+Styling guidance:
+
+Clean, light layout. Max width container max-w-5xl mx-auto px-4.
+Hero: full-bleed hero, image in the background, and a rounded translucent card on the left with headline, subhead and a CTA in our website green colour.
+Feature bullets with tick icons.
+Steps as numbered cards.
+CTA as a rounded card with button linking to /contact.
+
+Implementation notes:
+
+In [slug].tsx, load the page object by slug from pages.json. If no match, return 404.
+
+<PageHead> should set title, meta description, canonical, and inject faqSchema as <script type="application/ld+json">.
+
+Breadcrumbs: Home > Use Cases > [Hero H1].
+
+Add internal links near the top of each page: Smart Store, Micro Market, Traditional Vending, Locations.
+
+Buttons point to /contact.
+
+QA checklist:
+
+No symbol “—” in any content.
+
+All internal links resolve.
+
+Lighthouse mobile performance 90+.
+
+JSON-LD validates on Google Rich Results Test.
+
+Spelling uses British English.
