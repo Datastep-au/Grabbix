@@ -60,8 +60,7 @@ export default function TraditionalVending() {
     "Power: Standard 10A outlet",
     "Connectivity: Cellular telemetry",
     "Dimensions: ~1.0 m W × 0.8 m D × 1.9 m H",
-    "Payments: Tap-to-pay, cards, mobile wallets",
-    "Capacity: Up to 40 facings",
+    "Payments: Tap-to-pay, cards, mobile wallets, cash",
     "Servicing: Fully managed by Grabbix"
   ];
 
