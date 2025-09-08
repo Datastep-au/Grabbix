@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 import snacksStoreImage from "@assets/Snacks and Drinks Smart Store (1)_1750992249819.png";
 import microMarketImage from "@assets/Smart Stores - Micro Market-min_1752130129901.png";
 
@@ -68,6 +69,24 @@ export default function ProductsShowcase() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Traditional Solution Card */}
+        <div className="mt-12 flex justify-center">
+          <Link 
+            href="/products/traditional-vending"
+            className="bg-gray-100 hover:bg-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 max-w-md text-center group cursor-pointer"
+          >
+            <h3 className="text-xl font-bold text-grabbix-dark mb-3 group-hover:text-grabbix-teal transition-colors">
+              Prefer a traditional solution?
+            </h3>
+            <p className="text-gray-600 mb-4">
+              Explore the difference between smart stores and traditional vending machines.
+            </p>
+            <span className="text-grabbix-teal font-semibold group-hover:underline">
+              Learn more about traditional vending →
+            </span>
+          </Link>
         </div>
       </div>
     </section>
