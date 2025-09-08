@@ -71,7 +71,12 @@ export default function UseCasePage() {
         <section className="py-16">
           <div className="max-w-5xl mx-auto px-4">
             <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto text-center">
-              {pageData.intro}
+              {pageData.intro.split(/\b(with zero cost to you)\b/i).map((part, index) => {
+                if (part.toLowerCase() === 'with zero cost to you') {
+                  return <strong key={index} className="font-bold">{part}</strong>;
+                }
+                return part;
+              })}
             </p>
           </div>
         </section>
