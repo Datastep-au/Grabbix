@@ -55,7 +55,7 @@ const additionalUseCases = [
   {
     title: "Healthcare",
     description: "Support healthcare staff and visitors with hygienic, contactless vending for round-the-clock access.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+    image: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
     href: "/use-cases/healthcare",
   },
   {
