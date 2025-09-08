@@ -8,6 +8,7 @@ import Contact from "@/pages/contact";
 import Locations from "@/pages/locations";
 import LocationPage from "@/pages/location";
 import UseCasePage from "@/pages/use-case";
+import TraditionalVending from "@/pages/traditional-vending";
 import PrivacyPolicy from "@/pages/privacy-policy";
 import CookiePolicy from "@/pages/cookie-policy";
 import NotFound from "@/pages/not-found";
@@ -20,6 +21,7 @@ function Router() {
       <Route path="/locations" component={Locations} />
       <Route path="/location/:slug" component={LocationPage} />
       <Route path="/use-cases/:slug" component={UseCasePage} />
+      <Route path="/products/traditional-vending" component={TraditionalVending} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/cookie-policy" component={CookiePolicy} />
       <Route component={NotFound} />

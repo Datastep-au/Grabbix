@@ -1,0 +1,87 @@
+Create a new static page at /products/traditional-vending titled Traditional Vending Machines.
+
+Structure:
+
+Hero section
+
+1600×900 hero image (/public/images/products/traditional-hero.jpg).
+
+H1: “Traditional Vending Machines”
+
+Short subhead: “Classic vending with modern payments, fully managed by Grabbix.”
+
+Intro paragraph
+
+Text: “Traditional vending is a proven format for snacks and drinks. At Grabbix, we pair classic vending hardware with modern cashless payments, remote monitoring and full servicing. Perfect as a stand-alone machine or in a hybrid roll-out alongside our smart stores.”
+
+Comparison section
+Two simple side-by-side lists showing the main differences.
+
+Smart Stores
+
+Computer vision or sensors
+
+Open door shopping experience
+
+Cart-style checkout
+
+Best for mixed items and meals
+
+Rich analytics
+
+Traditional Vending
+
+Coils with clear selections
+
+One item per vend
+
+Fast single-item purchases
+
+Best for high drink throughput
+
+Simple and robust
+
+Specs / requirements
+Display as a simple bulleted list:
+
+Power: Standard 10A outlet
+
+Connectivity: Cellular telemetry
+
+Dimensions: ~1.0 m W × 0.8 m D × 1.9 m H
+
+Payments: Tap-to-pay, cards, mobile wallets
+
+Capacity: Up to 40 facings
+
+Servicing: Fully managed by Grabbix
+
+FAQ section
+
+Is installation free? – Yes. Install and servicing are free. You only pay for items sold.
+
+Do they support tap to pay? – Yes, all are cashless by default.
+
+Can we choose the products? – Yes, planograms are co-curated with you.
+
+Can we run smart and traditional together? – Yes, hybrid layouts are common.
+
+Call to action
+
+Heading: “Get a traditional vending proposal”
+
+Button: “Enquire now” → link to /contact
+
+SEO meta:
+
+Title: Traditional Vending Machines | Grabbix
+
+Description: Classic vending with cashless payments and full servicing. Grabbix offers traditional machines on their own or alongside smart stores.
+
+Canonical: https://grabbix.com.au/products/traditional-vending
+
+Image:
+Use /public/images/products/traditional-hero.jpg (1600×900). Alt text: Traditional vending machine in a modern lobby.
+
+Schema:
+Add a simple FAQPage JSON-LD for the FAQs.
