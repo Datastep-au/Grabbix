@@ -76,13 +76,6 @@ export default function UseCasePage() {
           </div>
         </section>
         
-        {/* Smart or Traditional Block */}
-        <SmartOrTraditional 
-          title={pageData.smartOrTraditional.title}
-          body={pageData.smartOrTraditional.body}
-          links={pageData.smartOrTraditional.links}
-        />
-        
         {/* Benefits/Features List */}
         <FeatureList benefits={pageData.benefits} />
         
@@ -104,6 +97,13 @@ export default function UseCasePage() {
             body={pageData.miniCaseStudy.body}
           />
         )}
+        
+        {/* Smart or Traditional Block */}
+        <SmartOrTraditional 
+          title={pageData.smartOrTraditional.title}
+          body={pageData.smartOrTraditional.body}
+          links={pageData.smartOrTraditional.links}
+        />
         
         {/* FAQ */}
         <FAQ faqs={pageData.faqs} />
