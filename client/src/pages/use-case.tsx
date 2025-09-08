@@ -4,7 +4,6 @@ import pagesData from "@/data/use-cases-pages.json";
 import SEOHead from "@/components/seo/SEOHead";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
-import UseCaseBreadcrumbs from "@/components/use-cases/use-case-breadcrumbs";
 import UseCaseHero from "@/components/use-cases/hero";
 import SmartOrTraditional from "@/components/use-cases/smart-or-traditional";
 import FeatureList from "@/components/use-cases/feature-list";
@@ -31,6 +30,9 @@ export default function UseCasePage() {
   const jsonLdSchema = pageData.faqSchema;
 
   useEffect(() => {
+    // Scroll to top when page loads
+    window.scrollTo(0, 0);
+    
     // Handle hash navigation when coming from external links
     const hash = window.location.hash.replace('#', '');
     if (hash) {
@@ -42,7 +44,7 @@ export default function UseCasePage() {
         }
       }, 100);
     }
-  }, []);
+  }, [slug]);
 
   return (
     <div className="min-h-screen">
@@ -56,9 +58,6 @@ export default function UseCasePage() {
       <Navigation />
       
       <div className="pt-16">
-        {/* Breadcrumbs */}
-        <UseCaseBreadcrumbs pageTitle={pageData.hero.h1} />
-        
         {/* Hero */}
         <UseCaseHero 
           h1={pageData.hero.h1}
