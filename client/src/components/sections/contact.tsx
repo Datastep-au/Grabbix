@@ -92,6 +92,8 @@ export default function Contact() {
                       <FormLabel className="text-base font-medium text-gray-700">Full Name *</FormLabel>
                       <FormControl>
                         <Input 
+                          name="name"
+                          autoComplete="name"
                           placeholder="Enter your full name" 
                           className="h-12 text-base border-gray-300 focus:border-grabbix-teal focus:ring-grabbix-teal/20" 
                           {...field} 
@@ -110,7 +112,9 @@ export default function Contact() {
                       <FormLabel className="text-base font-medium text-gray-700">Email Address *</FormLabel>
                       <FormControl>
                         <Input 
+                          name="email"
                           type="email" 
+                          autoComplete="email"
                           placeholder="Enter your email address" 
                           className="h-12 text-base border-gray-300 focus:border-grabbix-teal focus:ring-grabbix-teal/20" 
                           {...field} 
@@ -129,7 +133,9 @@ export default function Contact() {
                       <FormLabel className="text-base font-medium text-gray-700">Phone Number</FormLabel>
                       <FormControl>
                         <Input 
+                          name="phone"
                           type="tel" 
+                          autoComplete="tel"
                           placeholder="Enter your phone number" 
                           className="h-12 text-base border-gray-300 focus:border-grabbix-teal focus:ring-grabbix-teal/20" 
                           {...field} 
@@ -148,6 +154,8 @@ export default function Contact() {
                       <FormLabel className="text-base font-medium text-gray-700">Company/Building Name</FormLabel>
                       <FormControl>
                         <Input 
+                          name="company"
+                          autoComplete="organization"
                           placeholder="Enter company or building name" 
                           className="h-12 text-base border-gray-300 focus:border-grabbix-teal focus:ring-grabbix-teal/20" 
                           {...field} 
@@ -166,6 +174,8 @@ export default function Contact() {
                       <FormLabel className="text-base font-medium text-gray-700">Location *</FormLabel>
                       <FormControl>
                         <Input 
+                          name="location"
+                          autoComplete="address-level2"
                           placeholder="City, State/Province, Country" 
                           className="h-12 text-base border-gray-300 focus:border-grabbix-teal focus:ring-grabbix-teal/20" 
                           {...field} 
@@ -238,6 +248,7 @@ export default function Contact() {
                       <FormLabel className="text-base font-medium text-gray-700">Additional Details</FormLabel>
                       <FormControl>
                         <Textarea
+                          name="message"
                           placeholder="Tell us about your space, expected foot traffic, and any specific requirements..."
                           rows={4}
                           className="text-base border-gray-300 focus:border-grabbix-teal focus:ring-grabbix-teal/20 resize-none"
