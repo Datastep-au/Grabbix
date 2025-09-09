@@ -47,6 +47,10 @@ export default function ProductsShowcase() {
                   src={product.image}
                   alt={product.title}
                   className="w-full h-full object-contain object-center bg-gray-50"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="p-8">

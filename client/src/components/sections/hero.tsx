@@ -11,25 +11,28 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="hero-container">
       {/* Background Image */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="hero-bg">
         <img
           src={heroImage}
           alt="Grabbix Smart Store"
-          className="w-full h-full object-cover opacity-70"
+          className="hero-img"
+          width="1920"
+          height="1080"
+          decoding="async"
         />
-        <div className="absolute inset-0 bg-gray-300/30"></div>
+        <div className="hero-overlay"></div>
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+      <div className="hero-content">
+        <h1 className="hero-title">
           Where Convenience
           <br />
           Meets Innovation
         </h1>
-        <p className="text-xl md:text-2xl text-white font-bold mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="hero-subtitle">
           Smart, Secure, and Fully managed, customizable retail for apartments, offices, hotels, and more.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

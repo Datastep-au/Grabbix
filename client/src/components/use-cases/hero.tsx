@@ -11,10 +11,16 @@ export default function UseCaseHero({ h1, subhead, image, alt }: HeroProps) {
   return (
     <div className="relative h-[60vh] min-h-[500px] flex items-center">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${image})` }}
-      >
+      <div className="absolute inset-0">
+        <img
+          src={image}
+          alt={alt}
+          className="w-full h-full object-cover"
+          width="1920"
+          height="1080"
+          loading="lazy"
+          decoding="async"
+        />
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
       

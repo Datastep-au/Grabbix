@@ -109,4 +109,26 @@
   .hover\:bg-grabbix-blue:hover {
     background-color: hsl(199, 89%, 43%);
   }
+
+  /* Performance optimizations */
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  .transform-gpu {
+    transform: translateZ(0);
+  }
+  
+  /* Prevent layout shifts with aspect ratios */
+  .aspect-video {
+    aspect-ratio: 16 / 9;
+  }
+  
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+  
+  .aspect-4-3 {
+    aspect-ratio: 4 / 3;
+  }
 }

@@ -106,7 +106,11 @@ export default function UseCases() {
               <img
                 src={useCase.image}
                 alt={`${useCase.title} Environment`}
-                className="rounded-2xl shadow-xl w-full"
+                className="rounded-2xl shadow-xl w-full aspect-4-3 object-cover"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -123,6 +127,10 @@ export default function UseCases() {
                 src={useCase.image}
                 alt={`${useCase.title}`}
                 className="rounded-lg mb-4 w-full h-40 object-cover flex-shrink-0"
+                width="300"
+                height="160"
+                loading="lazy"
+                decoding="async"
               />
               <h4 className="text-lg font-semibold text-grabbix-dark mb-3 flex-shrink-0 group-hover:text-grabbix-teal transition-colors">{useCase.title}</h4>
               <p className="text-gray-600 text-sm flex-grow">{useCase.description}</p>

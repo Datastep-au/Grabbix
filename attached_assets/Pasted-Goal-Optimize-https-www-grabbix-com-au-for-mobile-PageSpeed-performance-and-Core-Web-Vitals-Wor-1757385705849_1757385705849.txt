@@ -1,0 +1,78 @@
+Goal: Optimize https://www.grabbix.com.au/ for mobile PageSpeed performance and Core Web Vitals. Work within the codebase (HTML, CSS, JS). Do not redesign content, remove essential features, or edit server settings.
+
+Targets:
+– Largest Contentful Paint (LCP) ≤ 2.5 s;
+– Interaction to Next Paint (INP) ≤ 200 ms;
+– Cumulative Layout Shift (CLS) ≤ 0.1
+developers.google.com
+.
+
+1. Identify and optimize the Largest Contentful Paint element
+
+Ensure the hero section (image/video/text) loads quickly:
+
+Preload the hero image or largest asset with <link rel="preload" as="image">.
+
+Convert the hero image to AVIF/WebP with appropriate srcset for mobile sizes and set accurate width/height attributes.
+
+Avoid injecting hero content via JavaScript; keep it server-rendered.
+
+Inline critical CSS used for the hero above the fold.
+
+2. Serve all images efficiently
+
+Convert large JPEG/PNG images to modern formats (AVIF or WebP) and provide a fallback.
+
+Supply responsive srcset/sizes attributes to deliver smaller images on mobile.
+
+Add loading="lazy" and decoding="async" to all off-screen images.
+
+Define width and height (or CSS aspect-ratio) for every image/iframe to prevent layout shifts.
+
+3. Eliminate render-blocking and unused CSS
+
+Inline critical styles needed for initial paint; load remaining CSS asynchronously (e.g. <link rel="preload" as="style" href="…"> plus onload swap).
+
+Remove unused CSS rules (e.g. purge unused framework classes) and minify stylesheets.
+
+Minimize the number of external stylesheets where possible.
+
+4. Defer and optimize JavaScript
+
+Add defer or async to non-critical scripts so they don’t block rendering.
+
+Split or lazy-load large scripts and modules (e.g. by route or component).
+
+Audit for unused scripts or libraries and remove them.
+
+Break up long tasks by chunking heavy functions with requestIdleCallback or setTimeout.
+
+5. Optimize font loading
+
+Host fonts locally and preload them with <link rel="preload" as="font">.
+
+Use font-display: swap so text remains visible while fonts load.
+
+Include fallback fonts with similar metrics in the CSS stack to minimize visual jumps.
+
+6. Control third-party impact
+
+Load analytics, chat widgets, or trackers after main content (deferred or lazily).
+
+Use rel="preconnect"/dns-prefetch for third-party domains if they’re critical.
+
+Remove unused third-party scripts entirely.
+
+7. Prevent layout shifts (CLS)
+
+Reserve space for dynamic content (e.g. modals, banners) using CSS min-height or aspect-ratio.
+
+Avoid inserting DOM elements above existing content after page load.
+
+Use CSS transforms for animations instead of properties that trigger reflow (like top or left).
+
+8. Validate improvements
+
+Add a script in your build pipeline to run Lighthouse in mobile emulation and store before/after metrics.
+
+Document which tasks improved LCP, INP, or CLS and check that there are no accessibility regressions.
