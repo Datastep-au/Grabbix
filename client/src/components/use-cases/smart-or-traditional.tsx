@@ -24,10 +24,12 @@ export default function SmartOrTraditional({ title, body, links }: SmartOrTradit
               );
               
               if (link) {
+                // Use home page products section for smart stores, otherwise use the original link
+                const href = part.toLowerCase().includes('smart stores') ? '/#products-showcase' : link.href;
                 return (
                   <Link 
                     key={index}
-                    href={link.href}
+                    href={href}
                     className="text-grabbix-teal hover:text-grabbix-teal/80 font-semibold underline decoration-grabbix-teal/30 hover:decoration-grabbix-teal/60 underline-offset-2"
                   >
                     {part}
@@ -41,15 +43,19 @@ export default function SmartOrTraditional({ title, body, links }: SmartOrTradit
           {/* Internal Links Section */}
           <div className="flex flex-wrap gap-4 pt-6 border-t border-gray-200">
             <span className="text-sm font-semibold text-gray-500 mr-2">Explore our solutions:</span>
-            {links.map((link, index) => (
-              <Link 
-                key={index}
-                href={link.href}
-                className="inline-flex items-center px-4 py-2 bg-gray-100 hover:bg-grabbix-teal/10 text-grabbix-teal font-semibold rounded-lg transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {links.map((link, index) => {
+              // Use home page products section for smart stores, otherwise use the original link
+              const href = link.label.toLowerCase().includes('smart stores') ? '/#products-showcase' : link.href;
+              return (
+                <Link 
+                  key={index}
+                  href={href}
+                  className="inline-flex items-center px-4 py-2 bg-gray-100 hover:bg-grabbix-teal/10 text-grabbix-teal font-semibold rounded-lg transition-colors"
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             <Link 
               href="/locations"
               className="inline-flex items-center px-4 py-2 bg-gray-100 hover:bg-grabbix-teal/10 text-grabbix-teal font-semibold rounded-lg transition-colors"
