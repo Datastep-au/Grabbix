@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://grabbix.com/sitemap.xml
+Sitemap: https://grabbix.com.au/sitemap.xml
 
 # Optimize crawling
 Crawl-delay: 1
