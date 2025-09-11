@@ -20,6 +20,8 @@ export default function Hero() {
           className="hero-img"
           width="1920"
           height="1080"
+          loading="eager"
+          fetchPriority="high"
           decoding="async"
         />
         <div className="hero-overlay"></div>
