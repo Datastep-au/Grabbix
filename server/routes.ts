@@ -5,6 +5,7 @@ import { insertContactSchema } from "@shared/schema";
 import { z } from "zod";
 import { getGoogleSheetsService } from "./services/googleSheets";
 import { getEmailService } from "./services/emailService";
+import { getHubSpotService } from "./services/hubspotService";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Google Sheets service will be initialized lazily when needed
@@ -22,6 +23,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
         console.log('Successfully added contact to Google Sheets');
       } catch (sheetsError) {
         console.error('Failed to add contact to Google Sheets:', sheetsError);
+      }
+      
+      // Send to HubSpot
+      try {
+        const hubspotService = getHubSpotService();
+        await hubspotService.submitToHubspot(contact);
+        console.log('Successfully submitted contact to HubSpot');
+      } catch (hubspotError) {
+        console.error('Failed to submit contact to HubSpot:', hubspotError);
       }
       
       res.json({ success: true, contact });
@@ -54,6 +64,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
         console.log('Successfully added contact to Google Sheets');
       } catch (sheetsError) {
         console.error('Failed to add contact to Google Sheets:', sheetsError);
+      }
+      
+      // Send to HubSpot
+      try {
+        const hubspotService = getHubSpotService();
+        await hubspotService.submitToHubspot(contact);
+        console.log('Successfully submitted contact to HubSpot');
+      } catch (hubspotError) {
+        console.error('Failed to submit contact to HubSpot:', hubspotError);
       }
       
       res.json({ success: true, contact });
@@ -89,8 +108,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Test endpoint to check integrations
   app.get("/api/test-integrations", async (req, res) => {
     const results = {
-      googleSheets: { status: 'unknown', error: null },
-      email: { status: 'unknown', error: null }
+      googleSheets: { status: 'unknown' as 'unknown' | 'success' | 'error', error: null as string | null },
+      email: { status: 'unknown' as 'unknown' | 'success' | 'error', error: null as string | null },
+      hubspot: { status: 'unknown' as 'unknown' | 'success' | 'error', error: null as string | null }
     };
 
     // Test Google Sheets
@@ -100,7 +120,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       results.googleSheets.status = 'success';
     } catch (error) {
       results.googleSheets.status = 'error';
-      results.googleSheets.error = error.message;
+      results.googleSheets.error = error instanceof Error ? error.message : String(error);
     }
 
     // Test Email Service
@@ -109,7 +129,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
       results.email.status = 'success';
     } catch (error) {
       results.email.status = 'error';
-      results.email.error = error.message;
+      results.email.error = error instanceof Error ? error.message : String(error);
+    }
+
+    // Test HubSpot Service
+    try {
+      const hubspotService = getHubSpotService();
+      results.hubspot.status = 'success';
+    } catch (error) {
+      results.hubspot.status = 'error';
+      results.hubspot.error = error instanceof Error ? error.message : String(error);
     }
 
     res.json(results);
