@@ -99,7 +99,7 @@ export default function Contact() {
         title="Contact Grabbix - Smart Store Solutions | Get Your Free Consultation"
         description="Contact Grabbix for AI-powered smart store solutions in Australia. Free consultation, site assessment, and custom quotes for offices, apartments, and shared spaces. Call +61 4311 854 35 or email info@grabbix.com.au"
         keywords="contact Grabbix, smart store consultation, free site assessment, smart retail quote, Melbourne office solutions, apartment micro markets, contactless shopping setup"
-        canonical="https://grabbix.com/contact"
+        canonical="https://grabbix.com.au/contact"
         jsonLd={contactJsonLd}
       />
       <Navigation />

@@ -18,7 +18,7 @@ export default function CookiePolicy() {
         title="Cookie Policy - Grabbix Smart Store Solutions"
         description="Cookie policy for Grabbix smart store solutions in Australia. Learn about cookies and tracking technologies we use on our website."
         keywords="cookie policy, website cookies, tracking technology, Grabbix cookies, web analytics"
-        canonical="https://grabbix.com/cookie-policy"
+        canonical="https://grabbix.com.au/cookie-policy"
         robots="noindex, nofollow"
         jsonLd={cookieJsonLd}
       />

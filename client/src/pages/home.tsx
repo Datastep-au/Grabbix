@@ -56,7 +56,7 @@ export default function Home() {
         title="Grabbix - Smart Store Solutions | Where Convenience Meets Innovation"
         description="Australia's leading AI-powered smart fridges and micro markets for offices, apartments, and shared spaces. Experience frictionless checkout, 24/7 autonomous retail solutions, and fully managed service across Melbourne and beyond."
         keywords="smart retail Australia, autonomous stores Melbourne, micro markets office, smart fridges apartments, AI retail technology, vending machines contactless, smart store solutions, office amenities Australia, Melbourne retail technology, contactless shopping"
-        canonical="https://grabbix.com/"
+        canonical="https://grabbix.com.au/"
         jsonLd={homeJsonLd}
       />
       <Navigation />

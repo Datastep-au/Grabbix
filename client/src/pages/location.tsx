@@ -112,7 +112,7 @@ export default function LocationPage() {
         title={`Free Vending Machine Service in ${locationName} - Grabbix Smart Stores`}
         description={`Professional vending machine service in ${locationName}, Melbourne. Smart, contactless vending machines for offices, apartments, and businesses. Free installation and fully managed service. Call +61 4311 854 35.`}
         keywords={`vending machine ${locationName}, smart vending ${locationName}, office vending ${locationName}, apartment vending machines, contactless vending Melbourne, free vending service ${locationName}`}
-        canonical={`https://grabbix.com/locations/${slug}`}
+        canonical={`https://grabbix.com.au/locations/${slug}`}
         jsonLd={locationJsonLd}
       />
       <Navigation />

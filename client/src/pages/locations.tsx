@@ -38,7 +38,7 @@ export default function Locations() {
         title="Grabbix Melbourne Locations - Smart Store Solutions Across 51+ Suburbs"
         description="Discover Grabbix smart store locations across Melbourne. Serving 51+ suburbs including Richmond, South Yarra, Prahran, Brighton, and more with 24/7 contactless retail solutions for offices and apartments."
         keywords="Grabbix Melbourne locations, smart stores Victoria, Melbourne suburbs retail, contactless shopping Melbourne, office amenities Victoria, apartment micro markets Melbourne"
-        canonical="https://grabbix.com/locations"
+        canonical="https://grabbix.com.au/locations"
         jsonLd={locationsJsonLd}
       />
       <Navigation />

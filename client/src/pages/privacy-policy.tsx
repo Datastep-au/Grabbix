@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
         title="Privacy Policy - Grabbix Smart Store Solutions"
         description="Privacy policy for Grabbix smart store solutions in Australia. Learn how we collect, use, and protect your personal information when using our services."
         keywords="privacy policy, data protection, personal information, Grabbix privacy, smart store privacy"
-        canonical="https://grabbix.com/privacy-policy"
+        canonical="https://grabbix.com.au/privacy-policy"
         robots="noindex, nofollow"
         jsonLd={privacyJsonLd}
       />
