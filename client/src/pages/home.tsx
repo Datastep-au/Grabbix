@@ -29,7 +29,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Grabbix",
-    "url": "https://grabbix.com",
+    "url": "https://grabbix.com.au",
     "logo": "https://grabbix.com/attached_assets/Grabbix Logo small_1750991127164.png",
     "description": "AI-powered smart store solutions for offices, apartments, and shared spaces",
     "address": {
