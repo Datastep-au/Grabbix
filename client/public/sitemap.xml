@@ -97,350 +97,357 @@
   
   <!-- Melbourne Location Pages -->
   <url>
-    <loc>https://grabbix.com.au/locations/melbourne</loc>
+    <loc>https://grabbix.com.au/location/abbotsford</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/albert-park</loc>
+    <loc>https://grabbix.com.au/location/armadale</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/brunswick</loc>
+    <loc>https://grabbix.com.au/location/ashburton</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/carlton</loc>
+    <loc>https://grabbix.com.au/location/balwyn</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/collingwood</loc>
+    <loc>https://grabbix.com.au/location/bentleigh</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/docklands</loc>
+    <loc>https://grabbix.com.au/location/blackburn</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/fitzroy</loc>
+    <loc>https://grabbix.com.au/location/box-hill</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/fitzroy-north</loc>
+    <loc>https://grabbix.com.au/location/brighton</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/hawthorn</loc>
+    <loc>https://grabbix.com.au/location/brunswick</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/kensington</loc>
+    <loc>https://grabbix.com.au/location/bulleen</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/north-melbourne</loc>
+    <loc>https://grabbix.com.au/location/burwood</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/port-melbourne</loc>
+    <loc>https://grabbix.com.au/location/camberwell</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/prahran</loc>
+    <loc>https://grabbix.com.au/location/canterbury</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/richmond</loc>
+    <loc>https://grabbix.com.au/location/caulfield</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/south-melbourne</loc>
+    <loc>https://grabbix.com.au/location/chadstone</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/south-yarra</loc>
+    <loc>https://grabbix.com.au/location/cheltenham</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/southbank</loc>
+    <loc>https://grabbix.com.au/location/clayton</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/st-kilda</loc>
+    <loc>https://grabbix.com.au/location/coburg</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/toorak</loc>
+    <loc>https://grabbix.com.au/location/cremorne</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/west-melbourne</loc>
+    <loc>https://grabbix.com.au/location/dingley-village</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/windsor</loc>
+    <loc>https://grabbix.com.au/location/doncaster</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/armadale</loc>
+    <loc>https://grabbix.com.au/location/elsternwick</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/brighton</loc>
+    <loc>https://grabbix.com.au/location/essendon</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/camberwell</loc>
+    <loc>https://grabbix.com.au/location/glen-iris</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/caulfield</loc>
+    <loc>https://grabbix.com.au/location/glen-waverley</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/chapel-hill</loc>
+    <loc>https://grabbix.com.au/location/hampton</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/clayton</loc>
+    <loc>https://grabbix.com.au/location/hawthorn</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/elsternwick</loc>
+    <loc>https://grabbix.com.au/location/highett</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/glen-iris</loc>
+    <loc>https://grabbix.com.au/location/kew</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/malvern</loc>
+    <loc>https://grabbix.com.au/location/keysborough</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/middle-park</loc>
+    <loc>https://grabbix.com.au/location/kooyong</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/st-kilda-east</loc>
+    <loc>https://grabbix.com.au/location/malvern</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/st-kilda-west</loc>
+    <loc>https://grabbix.com.au/location/mentone</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/abbotsford</loc>
+    <loc>https://grabbix.com.au/location/moorabbin</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/alphington</loc>
+    <loc>https://grabbix.com.au/location/mordialloc</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/cremorne</loc>
+    <loc>https://grabbix.com.au/location/mulgrave</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/fairfield</loc>
+    <loc>https://grabbix.com.au/location/noble-park</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/flemington</loc>
+    <loc>https://grabbix.com.au/location/northcote</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/parkville</loc>
+    <loc>https://grabbix.com.au/location/notting-hill</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/thornbury</loc>
+    <loc>https://grabbix.com.au/location/oakleigh</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/footscray</loc>
+    <loc>https://grabbix.com.au/location/parkdale</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/maribyrnong</loc>
+    <loc>https://grabbix.com.au/location/pascoe-vale</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/seddon</loc>
+    <loc>https://grabbix.com.au/location/prahran</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/yarraville</loc>
+    <loc>https://grabbix.com.au/location/richmond</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/cheltenham</loc>
+    <loc>https://grabbix.com.au/location/sandringham</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/mentone</loc>
+    <loc>https://grabbix.com.au/location/south-yarra</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/mordialloc</loc>
+    <loc>https://grabbix.com.au/location/springvale</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/oakleigh</loc>
+    <loc>https://grabbix.com.au/location/st-kilda</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/sandringham</loc>
+    <loc>https://grabbix.com.au/location/strathmore</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://grabbix.com.au/locations/moorabbin</loc>
+    <loc>https://grabbix.com.au/location/templestowe</loc>
+    <lastmod>2025-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://grabbix.com.au/location/toorak</loc>
     <lastmod>2025-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
