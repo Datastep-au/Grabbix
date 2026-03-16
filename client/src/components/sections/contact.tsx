@@ -27,8 +27,10 @@ type ContactFormData = z.infer<typeof contactFormSchema>;
 export default function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const form = useForm<ContactFormData>({
+    mode: "onBlur",
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
@@ -46,12 +48,14 @@ export default function Contact() {
     mutationFn: async (data: ContactFormData) => {
       return apiRequest("POST", "/api/contact", data);
     },
-    onSuccess: () => {
-      toast({
-        title: "Thank you for your interest!",
-        description: "We will contact you within 24 hours.",
+    onSuccess: (_data, variables) => {
+      window.dataLayer?.push({
+        event: 'form_submission',
+        form_location: 'home',
+        space_type: variables.spaceType,
+        customer_size: variables.customerSize
       });
-      form.reset();
+      setIsSuccess(true);
     },
     onError: (error: any) => {
       toast({
@@ -82,6 +86,24 @@ export default function Contact() {
 
         <div className="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-2xl mx-auto">
           <div className="p-12">
+            {isSuccess ? (
+              <div className="text-center py-8">
+                <div className="w-16 h-16 bg-grabbix-teal/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <svg className="w-8 h-8 text-grabbix-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Thanks! We'll be in touch within 24 hours.</h3>
+                <p className="text-gray-600 mb-6">One of our team will reach out to discuss the best vending solution for your space.</p>
+                <Button
+                  onClick={() => setIsSuccess(false)}
+                  variant="outline"
+                  className="border-grabbix-teal text-grabbix-teal hover:bg-grabbix-teal hover:text-white"
+                >
+                  Submit Another Enquiry
+                </Button>
+              </div>
+            ) : (
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FormField
@@ -130,7 +152,7 @@ export default function Contact() {
                   name="phone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-base font-medium text-gray-700">Phone Number</FormLabel>
+                      <FormLabel className="text-base font-medium text-gray-700">Phone (optional)</FormLabel>
                       <FormControl>
                         <Input 
                           {...field}
@@ -269,6 +291,7 @@ export default function Contact() {
                 </Button>
               </form>
             </Form>
+            )}
           </div>
         </div>
       </div>

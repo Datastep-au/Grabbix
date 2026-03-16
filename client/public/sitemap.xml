@@ -1,456 +1,387 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <!-- Main Pages -->
   <url>
     <loc>https://grabbix.com.au/</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/contact</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/locations</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-  
-  <url>
-    <loc>https://grabbix.com.au/privacy-policy</loc>
-    <lastmod>2025-07-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  
-  <url>
-    <loc>https://grabbix.com.au/cookie-policy</loc>
-    <lastmod>2025-07-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <!-- Product Pages -->
   <url>
     <loc>https://grabbix.com.au/products/traditional-vending</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Use Case Pages -->
+  <url>
+    <loc>https://grabbix.com.au/privacy-policy</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://grabbix.com.au/cookie-policy</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
   <url>
     <loc>https://grabbix.com.au/use-cases/offices</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://grabbix.com.au/use-cases/apartments</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-
-  <url>
-    <loc>https://grabbix.com.au/use-cases/gyms</loc>
-    <lastmod>2025-07-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://grabbix.com.au/use-cases/healthcare</loc>
-    <lastmod>2025-07-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://grabbix.com.au/use-cases/hotels</loc>
-    <lastmod>2025-07-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
   <url>
     <loc>https://grabbix.com.au/use-cases/coworking</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-
+  <url>
+    <loc>https://grabbix.com.au/use-cases/gyms</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://grabbix.com.au/use-cases/students</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-  
-  <!-- Melbourne Location Pages -->
+  <url>
+    <loc>https://grabbix.com.au/use-cases/healthcare</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://grabbix.com.au/use-cases/hotels</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://grabbix.com.au/location/abbotsford</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/armadale</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/ashburton</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/balwyn</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/bentleigh</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/blackburn</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/box-hill</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/brighton</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/brunswick</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/bulleen</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/burwood</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/camberwell</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/canterbury</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/caulfield</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/chadstone</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/cheltenham</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/clayton</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/coburg</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/cremorne</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/dingley-village</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/doncaster</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/elsternwick</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/essendon</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/glen-iris</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/glen-waverley</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/hampton</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/hawthorn</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/highett</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/kew</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/keysborough</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/kooyong</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/malvern</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/mentone</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/moorabbin</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/mordialloc</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/mulgrave</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/noble-park</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/northcote</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/notting-hill</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/oakleigh</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/parkdale</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/pascoe-vale</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/prahran</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/richmond</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/sandringham</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/south-yarra</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/springvale</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/st-kilda</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/strathmore</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/templestowe</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
   <url>
     <loc>https://grabbix.com.au/location/toorak</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
 </urlset>

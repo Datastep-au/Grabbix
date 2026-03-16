@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useParams } from "wouter";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
@@ -16,6 +17,29 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { insertContactSchema } from "@shared/schema";
+import { melbourneLocations } from "@shared/locations";
+
+// Per-suburb enrichment data for differentiated content
+const suburbData: Record<string, { emphasis: string; uniqueNote: string }> = {
+  "Clayton": { emphasis: "students", uniqueNote: "Home to Monash University's Clayton campus, making it ideal for student-focused vending with late-night snacks, study essentials and affordable meal options." },
+  "South Yarra": { emphasis: "apartments", uniqueNote: "One of Melbourne's most densely populated apartment suburbs. Residents expect premium amenities — a lobby vending machine adds genuine value to high-rise living." },
+  "Richmond": { emphasis: "offices", uniqueNote: "A thriving hub of creative agencies and tech offices along Church Street and Bridge Road. Office vending keeps teams onsite and productive." },
+  "Prahran": { emphasis: "coworking", uniqueNote: "Popular with freelancers and co-working spaces around Greville and Chapel Streets. A micro-market fits the flexible work culture." },
+  "St Kilda": { emphasis: "hotels", uniqueNote: "Melbourne's beachside tourism hub with hotels and backpacker accommodation. Late-night vending is a genuine guest amenity." },
+  "Brunswick": { emphasis: "apartments", uniqueNote: "A mix of student share houses and new apartment developments along Sydney Road. Vending in common areas serves a diverse resident base." },
+  "Hawthorn": { emphasis: "students", uniqueNote: "Close to Swinburne University and surrounded by student accommodation. Vending machines stocked with affordable meals and study snacks are a natural fit." },
+  "Brighton": { emphasis: "apartments", uniqueNote: "Upscale apartment living with residents who value convenience. A smart vending machine in the lobby adds a premium touch." },
+  "Camberwell": { emphasis: "offices", uniqueNote: "A well-established commercial centre with professional offices along Burke and Riversdale Roads." },
+  "Doncaster": { emphasis: "offices", uniqueNote: "Growing commercial precinct in Melbourne's east with corporate offices and medical suites that benefit from break-room vending." },
+  "Essendon": { emphasis: "gyms", uniqueNote: "Active sporting community with gyms and fitness centres along Keilor Road. Protein bars, energy drinks and hydration vending fit right in." },
+  "Caulfield": { emphasis: "students", uniqueNote: "Home to Monash University's Caulfield campus and surrounded by student housing. Affordable, accessible vending is in high demand." },
+  "Glen Waverley": { emphasis: "offices", uniqueNote: "A major suburban commercial centre with office parks and retail precincts that suit break-room and lobby vending." },
+  "Northcote": { emphasis: "coworking", uniqueNote: "A creative suburb with co-working spaces and independent businesses along High Street. Compact vending fits the local vibe." },
+  "Toorak": { emphasis: "apartments", uniqueNote: "Melbourne's most prestigious suburb with luxury apartment buildings where residents expect seamless amenities." },
+  "Kew": { emphasis: "healthcare", uniqueNote: "Home to several aged care and healthcare facilities. Staff on rotating shifts need reliable 24/7 access to meals and refreshments." },
+  "Box Hill": { emphasis: "healthcare", uniqueNote: "A major health precinct centred around Box Hill Hospital. Staff and visitor vending supports round-the-clock care teams." },
+  "Cremorne": { emphasis: "offices", uniqueNote: "Melbourne's tech and startup corridor along Church Street. Office vending keeps fast-paced teams fuelled and focused." },
+};
 
 // Contact form schema for location pages
 const locationContactSchema = insertContactSchema.extend({
@@ -28,25 +52,18 @@ type LocationContactData = z.infer<typeof locationContactSchema>;
 
 // Helper function to get nearby suburbs
 const getNearbySuburbs = (currentSuburb: string): string[] => {
-  const suburbs = [
-    "Abbotsford", "Armadale", "Ashburton", "Balwyn", "Bentleigh", "Blackburn", "Box Hill", "Brighton", "Brunswick",
-    "Bulleen", "Burwood", "Camberwell", "Canterbury", "Caulfield", "Chadstone", "Cheltenham", "Clayton", "Coburg",
-    "Cremorne", "Dingley Village", "Doncaster", "Elsternwick", "Essendon", "Glen Iris", "Glen Waverley", "Hampton",
-    "Hawthorn", "Highett", "Kew", "Keysborough", "Kooyong", "Malvern", "Mentone", "Moorabbin", "Mordialloc",
-    "Mulgrave", "Noble Park", "Northcote", "Notting Hill", "Oakleigh", "Parkdale", "Pascoe Vale", "Prahran",
-    "Richmond", "Sandringham", "South Yarra", "Springvale", "St Kilda", "Strathmore", "Templestowe", "Toorak"
-  ];
-  
-  const filtered = suburbs.filter(s => s !== currentSuburb);
+  const filtered = melbourneLocations.filter(s => s !== currentSuburb);
   return filtered.slice(0, 3); // Return first 3 different suburbs
 };
 
 export default function LocationPage() {
   const { slug } = useParams<{ slug: string }>();
   const { toast } = useToast();
-  
+  const [isSuccess, setIsSuccess] = useState(false);
+
   // Generate location data for any slug
   const locationName = slug ? slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) : "Melbourne Location";
+  const enrichment = suburbData[locationName];
   const nearbySuburbs = getNearbySuburbs(locationName);
 
   const locationJsonLd = {
@@ -68,7 +85,18 @@ export default function LocationPage() {
     }
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://grabbix.com.au/" },
+      { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://grabbix.com.au/locations" },
+      { "@type": "ListItem", "position": 3, "name": locationName }
+    ]
+  };
+
   const form = useForm<LocationContactData>({
+    mode: "onBlur",
     resolver: zodResolver(locationContactSchema),
     defaultValues: {
       name: "",
@@ -86,12 +114,14 @@ export default function LocationPage() {
     mutationFn: async (data: LocationContactData) => {
       return apiRequest("POST", "/api/contact", data);
     },
-    onSuccess: () => {
-      toast({
-        title: "Thank you for your interest!",
-        description: "We will contact you within 24 hours to discuss your smart vending solution.",
+    onSuccess: (_data, variables) => {
+      window.dataLayer?.push({
+        event: 'form_submission',
+        form_location: 'location',
+        space_type: variables.spaceType,
+        customer_size: variables.customerSize
       });
-      form.reset();
+      setIsSuccess(true);
     },
     onError: (error: any) => {
       toast({
@@ -112,11 +142,22 @@ export default function LocationPage() {
         title={`Free Vending Machine Service in ${locationName} - Grabbix Smart Stores`}
         description={`Professional vending machine service in ${locationName}, Melbourne. Smart, contactless vending machines for offices, apartments, and businesses. Free installation and fully managed service. Call +61 4311 854 35.`}
         keywords={`vending machine ${locationName}, smart vending ${locationName}, office vending ${locationName}, apartment vending machines, contactless vending Melbourne, free vending service ${locationName}`}
-        canonical={`https://grabbix.com.au/locations/${slug}`}
-        jsonLd={locationJsonLd}
+        canonical={`https://grabbix.com.au/location/${slug}`}
+        jsonLd={[locationJsonLd, breadcrumbSchema]}
       />
       <Navigation />
       <div className="pt-16">
+        {/* Breadcrumbs */}
+        <nav aria-label="Breadcrumb" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+          <ol className="flex items-center space-x-2 text-sm text-gray-500">
+            <li><a href="/" className="hover:text-grabbix-teal">Home</a></li>
+            <li>/</li>
+            <li><a href="/locations" className="hover:text-grabbix-teal">Locations</a></li>
+            <li>/</li>
+            <li className="text-gray-900 font-medium">{locationName}</li>
+          </ol>
+        </nav>
+
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Header */}
           <div className="mb-12">
@@ -134,6 +175,11 @@ export default function LocationPage() {
                 <p className="text-lg text-gray-700 mb-6">
                   Looking for a <strong>free vending machine service in {locationName}</strong> that's modern, reliable, and hassle-free? Grabbix installs smart, cashless vending machines in offices, apartments, gyms, schools, and hotels across {locationName} — and we do it all at no cost to you.
                 </p>
+                {enrichment && (
+                  <p className="text-lg text-gray-700 mb-6">
+                    {enrichment.uniqueNote}
+                  </p>
+                )}
               </section>
 
               {/* Why Choose */}
@@ -260,6 +306,24 @@ export default function LocationPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
+                  {isSuccess ? (
+                    <div className="text-center py-8">
+                      <div className="w-16 h-16 bg-grabbix-teal/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg className="w-8 h-8 text-grabbix-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3">Thanks! We'll be in touch within 24 hours.</h3>
+                      <p className="text-gray-600 mb-6">One of our team will reach out to discuss the best vending solution for your space.</p>
+                      <Button
+                        onClick={() => setIsSuccess(false)}
+                        variant="outline"
+                        className="border-grabbix-teal text-grabbix-teal hover:bg-grabbix-teal hover:text-white"
+                      >
+                        Submit Another Enquiry
+                      </Button>
+                    </div>
+                  ) : (
                   <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                       <FormField
@@ -293,7 +357,7 @@ export default function LocationPage() {
                         name="phone"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Phone Number</FormLabel>
+                            <FormLabel>Phone (optional)</FormLabel>
                             <FormControl>
                               <Input placeholder="+61 4XX XXX XXX" {...field} />
                             </FormControl>
@@ -392,6 +456,7 @@ export default function LocationPage() {
                       </Button>
                     </form>
                   </Form>
+                  )}
                 </CardContent>
               </Card>
             </div>

@@ -30,8 +30,10 @@ export default function Contact() {
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const form = useForm<ContactFormData>({
+    mode: "onBlur",
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
@@ -49,13 +51,14 @@ export default function Contact() {
     mutationFn: async (data: ContactFormData) => {
       return apiRequest("POST", "/api/contacts", data);
     },
-    onSuccess: () => {
-      toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you within 24 hours.",
+    onSuccess: (_data, variables) => {
+      window.dataLayer?.push({
+        event: 'form_submission',
+        form_location: 'contact',
+        space_type: variables.spaceType,
+        customer_size: variables.customerSize
       });
-      form.reset();
-      queryClient.invalidateQueries({ queryKey: ["/api/contacts"] });
+      setIsSuccess(true);
     },
     onError: (error: any) => {
       toast({
@@ -215,6 +218,24 @@ export default function Contact() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
+                {isSuccess ? (
+                  <div className="text-center py-8">
+                    <div className="w-16 h-16 bg-grabbix-teal/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <svg className="w-8 h-8 text-grabbix-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Thanks! We'll be in touch within 24 hours.</h3>
+                    <p className="text-gray-600 mb-6">One of our team will reach out to discuss the best vending solution for your space.</p>
+                    <Button
+                      onClick={() => setIsSuccess(false)}
+                      variant="outline"
+                      className="border-grabbix-teal text-grabbix-teal hover:bg-grabbix-teal hover:text-white"
+                    >
+                      Submit Another Enquiry
+                    </Button>
+                  </div>
+                ) : (
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -253,7 +274,7 @@ export default function Contact() {
                         name="phone"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Phone Number</FormLabel>
+                            <FormLabel>Phone (optional)</FormLabel>
                             <FormControl>
                               <Input placeholder="+61 4XX XXX XXX" {...field} />
                             </FormControl>
@@ -329,6 +350,7 @@ export default function Contact() {
                     </Button>
                   </form>
                 </Form>
+                )}
               </CardContent>
             </Card>
           </div>

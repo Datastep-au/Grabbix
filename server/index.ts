@@ -47,18 +47,10 @@ app.use((req, res, next) => {
     throw err;
   });
 
-  // Serve static files for location pages and index.html before Vite middleware
-  app.use('/location_pages', express.static('location_pages', { 
-    setHeaders: (res, path) => {
-      if (path.endsWith('.html')) {
-        res.setHeader('Content-Type', 'text/html; charset=utf-8');
-      }
-    }
-  }));
-  
-  // Serve the main location index.html
-  app.get('/index.html', (req, res) => {
-    res.sendFile('index.html', { root: process.cwd() });
+  // 301 redirect legacy location pages to React routes
+  app.get('/location_pages/free-vending-service-in-:suburb.html', (req, res) => {
+    const slug = req.params.suburb;
+    res.redirect(301, `/location/${slug}`);
   });
 
   // importantly only setup vite in development and after

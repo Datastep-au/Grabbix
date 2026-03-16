@@ -6,57 +6,23 @@ import { z } from "zod";
 import { getGoogleSheetsService } from "./services/googleSheets";
 import { getEmailService } from "./services/emailService";
 import { getHubSpotService } from "./services/hubspotService";
+import rateLimit from 'express-rate-limit';
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Google Sheets service will be initialized lazily when needed
 
-  // Contact form submission endpoint
-  app.post("/api/contact", async (req, res) => {
-    try {
-      const validatedData = insertContactSchema.parse(req.body);
-      const contact = await storage.createContact(validatedData);
-      
-      // Send to Google Sheets (focus on this integration)
-      try {
-        const googleSheetsService = getGoogleSheetsService();
-        await googleSheetsService.appendContactToSheet(contact);
-        console.log('Successfully added contact to Google Sheets');
-      } catch (sheetsError) {
-        console.error('Failed to add contact to Google Sheets:', sheetsError);
-      }
-      
-      // Send to HubSpot
-      try {
-        const hubspotService = getHubSpotService();
-        await hubspotService.submitToHubspot(contact);
-        console.log('Successfully submitted contact to HubSpot');
-      } catch (hubspotError) {
-        console.error('Failed to submit contact to HubSpot:', hubspotError);
-      }
-      
-      res.json({ success: true, contact });
-    } catch (error) {
-      if (error instanceof z.ZodError) {
-        res.status(400).json({ 
-          success: false, 
-          message: "Invalid form data", 
-          errors: error.errors 
-        });
-      } else {
-        res.status(500).json({ 
-          success: false, 
-          message: "Failed to submit contact form" 
-        });
-      }
-    }
+  const contactLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 5,
+    message: { success: false, message: "Too many submissions. Please try again later." }
   });
 
-  // Contact form submission endpoint for new contact page
-  app.post("/api/contacts", async (req, res) => {
+  // Shared contact form handler
+  const handleContactSubmission = async (req: any, res: any) => {
     try {
       const validatedData = insertContactSchema.parse(req.body);
       const contact = await storage.createContact(validatedData);
-      
+
       // Send to Google Sheets (focus on this integration)
       try {
         const googleSheetsService = getGoogleSheetsService();
@@ -65,7 +31,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       } catch (sheetsError) {
         console.error('Failed to add contact to Google Sheets:', sheetsError);
       }
-      
+
       // Send to HubSpot
       try {
         const hubspotService = getHubSpotService();
@@ -74,23 +40,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
       } catch (hubspotError) {
         console.error('Failed to submit contact to HubSpot:', hubspotError);
       }
-      
+
       res.json({ success: true, contact });
     } catch (error) {
       if (error instanceof z.ZodError) {
-        res.status(400).json({ 
-          success: false, 
-          message: "Invalid form data", 
-          errors: error.errors 
+        res.status(400).json({
+          success: false,
+          message: "Invalid form data",
+          errors: error.errors
         });
       } else {
-        res.status(500).json({ 
-          success: false, 
-          message: "Failed to submit contact form" 
+        res.status(500).json({
+          success: false,
+          message: "Failed to submit contact form"
         });
       }
     }
-  });
+  };
+
+  app.post("/api/contact", contactLimiter, handleContactSubmission);
+  app.post("/api/contacts", contactLimiter, handleContactSubmission);
 
   // Get all contacts (for potential admin dashboard)
   app.get("/api/contacts", async (req, res) => {
@@ -98,51 +67,53 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const contacts = await storage.getContacts();
       res.json(contacts);
     } catch (error) {
-      res.status(500).json({ 
-        success: false, 
-        message: "Failed to fetch contacts" 
+      res.status(500).json({
+        success: false,
+        message: "Failed to fetch contacts"
       });
     }
   });
 
   // Test endpoint to check integrations
-  app.get("/api/test-integrations", async (req, res) => {
-    const results = {
-      googleSheets: { status: 'unknown' as 'unknown' | 'success' | 'error', error: null as string | null },
-      email: { status: 'unknown' as 'unknown' | 'success' | 'error', error: null as string | null },
-      hubspot: { status: 'unknown' as 'unknown' | 'success' | 'error', error: null as string | null }
-    };
+  if (process.env.NODE_ENV === 'development') {
+    app.get("/api/test-integrations", async (req, res) => {
+      const results = {
+        googleSheets: { status: 'unknown' as 'unknown' | 'success' | 'error', error: null as string | null },
+        email: { status: 'unknown' as 'unknown' | 'success' | 'error', error: null as string | null },
+        hubspot: { status: 'unknown' as 'unknown' | 'success' | 'error', error: null as string | null }
+      };
 
-    // Test Google Sheets
-    try {
-      const googleSheetsService = getGoogleSheetsService();
-      await googleSheetsService.initializeSheet();
-      results.googleSheets.status = 'success';
-    } catch (error) {
-      results.googleSheets.status = 'error';
-      results.googleSheets.error = error instanceof Error ? error.message : String(error);
-    }
+      // Test Google Sheets
+      try {
+        const googleSheetsService = getGoogleSheetsService();
+        await googleSheetsService.initializeSheet();
+        results.googleSheets.status = 'success';
+      } catch (error) {
+        results.googleSheets.status = 'error';
+        results.googleSheets.error = error instanceof Error ? error.message : String(error);
+      }
 
-    // Test Email Service
-    try {
-      const emailService = getEmailService();
-      results.email.status = 'success';
-    } catch (error) {
-      results.email.status = 'error';
-      results.email.error = error instanceof Error ? error.message : String(error);
-    }
+      // Test Email Service
+      try {
+        const emailService = getEmailService();
+        results.email.status = 'success';
+      } catch (error) {
+        results.email.status = 'error';
+        results.email.error = error instanceof Error ? error.message : String(error);
+      }
 
-    // Test HubSpot Service
-    try {
-      const hubspotService = getHubSpotService();
-      results.hubspot.status = 'success';
-    } catch (error) {
-      results.hubspot.status = 'error';
-      results.hubspot.error = error instanceof Error ? error.message : String(error);
-    }
+      // Test HubSpot Service
+      try {
+        const hubspotService = getHubSpotService();
+        results.hubspot.status = 'success';
+      } catch (error) {
+        results.hubspot.status = 'error';
+        results.hubspot.error = error instanceof Error ? error.message : String(error);
+      }
 
-    res.json(results);
-  });
+      res.json(results);
+    });
+  }
 
   const httpServer = createServer(app);
   return httpServer;

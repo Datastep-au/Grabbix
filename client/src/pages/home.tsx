@@ -31,7 +31,7 @@ export default function Home() {
     "name": "Grabbix",
     "url": "https://grabbix.com.au",
     "logo": "https://grabbix.com.au/attached_assets/Grabbix Logo small_1750991127164.png",
-    "description": "AI-powered smart store solutions for offices, apartments, and shared spaces",
+    "description": "Free vending machine installation and management across Melbourne. Smart and traditional vending machines for offices, apartments, gyms and hotels.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Melbourne",
@@ -53,9 +53,9 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Grabbix - Smart Store Solutions | Where Convenience Meets Innovation"
-        description="Australia's leading AI-powered smart fridges and micro markets for offices, apartments, and shared spaces. Experience frictionless checkout, 24/7 autonomous retail solutions, and fully managed service across Melbourne and beyond."
-        keywords="smart retail Australia, autonomous stores Melbourne, micro markets office, smart fridges apartments, AI retail technology, vending machines contactless, smart store solutions, office amenities Australia, Melbourne retail technology, contactless shopping"
+        title="Free Vending Machines Melbourne | Smart & Traditional | Grabbix"
+        description="Free vending machine installation across Melbourne. Smart cashless vending machines for offices, apartments, gyms & hotels. Fully managed service by Grabbix."
+        keywords="free vending machines Melbourne, office vending machines, apartment vending machines, smart vending machines, vending machine service Melbourne, traditional vending machines"
         canonical="https://grabbix.com.au/"
         jsonLd={homeJsonLd}
       />

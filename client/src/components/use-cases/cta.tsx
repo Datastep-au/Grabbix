@@ -22,7 +22,14 @@ export default function CTA({ title, body, buttonLabel, buttonHref }: CTAProps) 
           <Button 
             size="lg" 
             className="bg-grabbix-teal hover:bg-grabbix-teal/90 text-white px-8 py-3 text-lg inline-flex items-center gap-2"
-            onClick={() => window.location.href = buttonHref}
+            onClick={() => {
+              window.dataLayer?.push({
+                event: 'cta_click',
+                cta_text: buttonLabel,
+                cta_location: 'use-case'
+              });
+              window.location.href = buttonHref;
+            }}
           >
             {buttonLabel}
             <ArrowRight className="w-5 h-5" />

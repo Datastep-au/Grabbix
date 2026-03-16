@@ -56,6 +56,28 @@ export default function TraditionalVending() {
     ]
   };
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Traditional Vending Machine Service",
+    "provider": {
+      "@type": "Organization",
+      "name": "Grabbix",
+      "url": "https://grabbix.com.au"
+    },
+    "description": "Classic vending machines with cashless payments, fully managed by Grabbix. Free installation and servicing.",
+    "areaServed": {
+      "@type": "City",
+      "name": "Melbourne, Victoria, Australia"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "AUD",
+      "description": "Free installation and servicing"
+    }
+  };
+
   const specs = [
     "Power: Standard 10A outlet",
     "Connectivity: Cellular telemetry",
@@ -105,7 +127,7 @@ export default function TraditionalVending() {
         title="Traditional Vending Machines | Grabbix"
         description="Classic vending with cashless payments and full servicing. Grabbix offers traditional machines on their own or alongside smart stores."
         canonical="https://grabbix.com.au/products/traditional-vending"
-        jsonLd={faqSchema}
+        jsonLd={[faqSchema, serviceSchema]}
       />
       
       <Navigation />

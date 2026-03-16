@@ -14,7 +14,7 @@ interface SEOHeadProps {
   articleSection?: string;
   locale?: string;
   alternateLanguages?: { lang: string; url: string }[];
-  jsonLd?: object;
+  jsonLd?: object | object[];
 }
 
 export default function SEOHead({
@@ -132,13 +132,17 @@ export default function SEOHead({
     
     // JSON-LD structured data
     if (jsonLd) {
-      let script = document.querySelector('script[type="application/ld+json"]') as HTMLScriptElement;
-      if (!script) {
-        script = document.createElement('script');
-        script.type = 'application/ld+json';
-        document.head.appendChild(script);
+      // Remove any existing JSON-LD scripts
+      document.querySelectorAll('script[type="application/ld+json"]').forEach(el => el.remove());
+
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      if (Array.isArray(jsonLd)) {
+        script.textContent = JSON.stringify({ "@context": "https://schema.org", "@graph": jsonLd });
+      } else {
+        script.textContent = JSON.stringify(jsonLd);
       }
-      script.textContent = JSON.stringify(jsonLd);
+      document.head.appendChild(script);
     }
     
   }, [title, description, keywords, ogTitle, ogDescription, ogImage, ogUrl, canonical, robots, author, articleSection, locale, alternateLanguages, jsonLd]);

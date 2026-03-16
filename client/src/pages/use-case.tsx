@@ -29,6 +29,16 @@ export default function UseCasePage() {
   // Extract JSON-LD schema for SEO
   const jsonLdSchema = pageData.faqSchema;
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://grabbix.com.au/" },
+      { "@type": "ListItem", "position": 2, "name": "Use Cases", "item": "https://grabbix.com.au/#use-cases" },
+      { "@type": "ListItem", "position": 3, "name": pageData.hero.h1 }
+    ]
+  };
+
   useEffect(() => {
     // Scroll to top when page loads
     window.scrollTo(0, 0);
@@ -52,12 +62,23 @@ export default function UseCasePage() {
         title={pageData.metaTitle}
         description={pageData.metaDescription}
         canonical={pageData.canonical}
-        jsonLd={jsonLdSchema}
+        jsonLd={[jsonLdSchema, breadcrumbSchema]}
       />
       
       <Navigation />
       
       <div className="pt-16">
+        {/* Breadcrumbs */}
+        <nav aria-label="Breadcrumb" className="max-w-5xl mx-auto px-4 pt-4">
+          <ol className="flex items-center space-x-2 text-sm text-gray-500">
+            <li><a href="/" className="hover:text-grabbix-teal">Home</a></li>
+            <li>/</li>
+            <li><a href="/#use-cases" className="hover:text-grabbix-teal">Use Cases</a></li>
+            <li>/</li>
+            <li className="text-gray-900 font-medium">{pageData.hero.h1}</li>
+          </ol>
+        </nav>
+
         {/* Hero */}
         <UseCaseHero 
           h1={pageData.hero.h1}

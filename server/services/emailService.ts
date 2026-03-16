@@ -1,6 +1,15 @@
 import sgMail from '@sendgrid/mail';
 import { Contact } from '@shared/schema';
 
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 interface EmailConfig {
   apiKey: string;
   fromEmail: string;
@@ -27,15 +36,15 @@ export class EmailService {
       const htmlContent = `
         <h2>New Contact Form Submission - Grabbix</h2>
         <p><strong>Timestamp:</strong> ${new Date().toLocaleString()}</p>
-        <p><strong>Name:</strong> ${contact.name}</p>
-        <p><strong>Email:</strong> ${contact.email}</p>
-        <p><strong>Phone:</strong> ${contact.phone || 'Not provided'}</p>
-        <p><strong>Company:</strong> ${contact.company || 'Not provided'}</p>
-        <p><strong>Customer Size:</strong> ${contact.customerSize || 'Not provided'}</p>
-        <p><strong>Location:</strong> ${contact.location || 'Not provided'}</p>
-        <p><strong>Space Type:</strong> ${contact.spaceType || 'Not provided'}</p>
+        <p><strong>Name:</strong> ${escapeHtml(contact.name)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(contact.email)}</p>
+        <p><strong>Phone:</strong> ${contact.phone ? escapeHtml(contact.phone) : 'Not provided'}</p>
+        <p><strong>Company:</strong> ${contact.company ? escapeHtml(contact.company) : 'Not provided'}</p>
+        <p><strong>Customer Size:</strong> ${contact.customerSize ? escapeHtml(contact.customerSize) : 'Not provided'}</p>
+        <p><strong>Location:</strong> ${contact.location ? escapeHtml(contact.location) : 'Not provided'}</p>
+        <p><strong>Space Type:</strong> ${contact.spaceType ? escapeHtml(contact.spaceType) : 'Not provided'}</p>
         <p><strong>Message:</strong></p>
-        <p>${contact.message || 'No message provided'}</p>
+        <p>${contact.message ? escapeHtml(contact.message) : 'No message provided'}</p>
         <hr>
         <p><small>This notification was sent from your Grabbix website contact form.</small></p>
       `;

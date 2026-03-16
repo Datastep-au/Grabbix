@@ -25,13 +25,8 @@ export class GoogleSheetsService {
     
     // Ensure the key has proper PEM formatting
     if (!privateKey.startsWith('-----BEGIN PRIVATE KEY-----')) {
-      console.log('Current private key value:', privateKey.substring(0, 100) + '...');
       throw new Error(`Invalid private key format. Must start with "-----BEGIN PRIVATE KEY-----". Current format: "${privateKey.substring(0, 50)}..."`);
     }
-    
-    console.log('Private key first 50 chars:', privateKey.substring(0, 50));
-    console.log('Client email:', config.clientEmail);
-    console.log('Sheet ID:', config.sheetId);
     
     const auth = new google.auth.GoogleAuth({
       credentials: {
@@ -122,7 +117,10 @@ export class GoogleSheetsService {
 let googleSheetsService: GoogleSheetsService | null = null;
 
 export function getGoogleSheetsService(): GoogleSheetsService {
-  // Always create a new service to avoid caching issues
+  if (googleSheetsService) {
+    return googleSheetsService;
+  }
+
   let privateKey = '';
   let clientEmail = '';
   
@@ -154,5 +152,6 @@ export function getGoogleSheetsService(): GoogleSheetsService {
     throw new Error('Google Sheets configuration is incomplete');
   }
 
-  return new GoogleSheetsService(config);
+  googleSheetsService = new GoogleSheetsService(config);
+  return googleSheetsService;
 }

@@ -30,19 +30,26 @@ export default function Hero() {
       {/* Hero Content */}
       <div className="hero-content">
         <h1 className="hero-title">
-          Where Convenience
+          Free Vending Machines,
           <br />
-          Meets Innovation
+          Installed & Managed for You
         </h1>
         <p className="hero-subtitle">
-          Smart, Secure, and Fully managed, customizable retail for apartments, offices, hotels, and more.
+          Smart cashless vending for offices, apartments, gyms and hotels across Melbourne. Zero cost to you — we install, stock and maintain everything.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button
-            onClick={() => scrollToSection("contact")}
+            onClick={() => {
+              window.dataLayer?.push({
+                event: 'cta_click',
+                cta_text: 'Get Your Free Vending Machine',
+                cta_location: 'hero'
+              });
+              scrollToSection("contact");
+            }}
             className="bg-grabbix-teal text-white px-8 py-4 text-lg font-semibold hover:bg-grabbix-teal/90 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
-            Get a Grabbix
+            Get Your Free Vending Machine
           </Button>
           <Button
             onClick={() => scrollToSection("how-it-works")}
