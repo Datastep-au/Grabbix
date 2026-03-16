@@ -25,7 +25,7 @@ export class GoogleSheetsService {
     
     // Ensure the key has proper PEM formatting
     if (!privateKey.startsWith('-----BEGIN PRIVATE KEY-----')) {
-      throw new Error(`Invalid private key format. Must start with "-----BEGIN PRIVATE KEY-----". Current format: "${privateKey.substring(0, 50)}..."`);
+      throw new Error('Invalid private key format. Key must start with "-----BEGIN PRIVATE KEY-----". Check that the GOOGLE_SHEETS_PRIVATE_KEY environment variable is set correctly.');
     }
     
     const auth = new google.auth.GoogleAuth({
